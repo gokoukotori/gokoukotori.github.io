@@ -1,17 +1,11 @@
 <script>
-  import "./app.css";
-  import { DarkMode } from "flowbite-svelte";
   import {
-    Navbar,
-    NavBrand,
-    NavLi,
-    NavUl,
-    NavHamburger,
     Footer,
     FooterCopyright,
     Button,
     Card,
   } from "flowbite-svelte";
+  import SiteHeader from "./components/SiteHeader.svelte";
 </script>
 
 <main>
@@ -23,25 +17,7 @@
       class="absolute inset-0 bg-black/25 pointer-events-none"
       aria-hidden="true"
     ></div>
-    <div class="sticky top-0 z-50">
-      <Navbar class="dark:bg-gray-800/95 bg-white/95">
-        <NavBrand>
-          <span
-            class="self-center text-xl font-semibold whitespace-nowrap dark:text-white"
-            >五香ことり</span
-          >
-        </NavBrand>
-        <div class="flex items-center md:order-2">
-          <NavHamburger />
-          <NavUl>
-            <NavLi href="#Home">Home</NavLi>
-            <NavLi href="#About">About</NavLi>
-            <NavLi href="#Links">Links</NavLi>
-          </NavUl>
-          <DarkMode class="text-lg" />
-        </div>
-      </Navbar>
-    </div>
+    <SiteHeader current="home" />
     <div
       class="relative z-10 flex flex-1 flex-col items-center justify-center text-center"
     >
