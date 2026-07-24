@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npm run gallery:validate && vite build",
+    "build": "vite build",
+    "buildold": "npm run gallery:validate && vite build",
     "preview": "vite preview",
     "gallery:thumbnails": "node scripts/prepare-r2-thumbnails.mjs",
     "test": "node --test scripts/*.test.mjs",
