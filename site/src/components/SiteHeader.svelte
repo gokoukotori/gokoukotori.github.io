@@ -10,10 +10,10 @@
 
   export let current = 'home';
 
-  const activeUrl = current === 'gallery' ? '/gallery/' : '/#Home';
+  const activeUrl = current === 'avatars' ? '/avatars/' : current === 'gallery' ? '/gallery/' : '/#Home';
 </script>
 
-<header class="site-header">
+<header class="site-header sticky top-0 z-50">
   <Navbar
     fluid
     class="bg-white/95 px-3 backdrop-blur-md dark:bg-gray-800/95"
@@ -42,16 +42,9 @@
         <NavLi href="/#About">About</NavLi>
         <NavLi href="/#Links">Links</NavLi>
         <NavLi href="/gallery/">Gallery</NavLi>
+        <NavLi href="/avatars/">Avatars</NavLi>
       </NavUl>
       <DarkMode class="text-lg" />
     </div>
   </Navbar>
 </header>
-
-<style>
-  .site-header {
-    position: sticky;
-    top: 0;
-    z-index: 50;
-  }
-</style>

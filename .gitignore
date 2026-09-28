@@ -19,6 +19,10 @@ dist-ssr
 upimg/
 .env.r2.local
 scripts/
+# Preserve local-only gallery tests after directory reorganization
+tests/gallery/gallery-pipeline.test.mjs
+tests/gallery/justified-gallery.test.mjs
+.cms/
 
 # Editor directories and files
 .vscode/*

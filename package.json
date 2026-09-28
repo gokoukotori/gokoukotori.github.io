@@ -5,16 +5,19 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "cms": "node --env-file-if-exists=.env.r2.local cms/server/server.mjs",
+    "test:cms": "node --test tests/cms/cms.test.mjs",
     "build": "vite build",
     "buildold": "npm run gallery:validate && vite build",
     "preview": "vite preview",
-    "gallery:thumbnails": "node scripts/prepare-r2-thumbnails.mjs",
-    "test": "node --test scripts/*.test.mjs",
-    "gallery:manifest": "node scripts/generate-gallery-manifest.mjs",
-    "gallery:validate": "node scripts/validate-gallery-manifest.mjs",
-    "gallery:validate:local": "node scripts/validate-gallery-manifest.mjs --local",
-    "gallery:r2:check": "node --env-file-if-exists=.env.r2.local scripts/upload-r2-gallery.mjs",
-    "gallery:r2:upload": "node --env-file-if-exists=.env.r2.local scripts/upload-r2-gallery.mjs --apply"
+    "gallery:thumbnails": "node scripts/gallery/prepare-r2-thumbnails.mjs",
+    "test": "node --test tests/gallery/*.test.mjs",
+    "test:avatars": "node --test tests/avatars/*.test.js",
+    "gallery:manifest": "node scripts/gallery/generate-gallery-manifest.mjs",
+    "gallery:validate": "node scripts/gallery/validate-gallery-manifest.mjs",
+    "gallery:validate:local": "node scripts/gallery/validate-gallery-manifest.mjs --local",
+    "gallery:r2:check": "node --env-file-if-exists=.env.r2.local scripts/gallery/upload-r2-gallery.mjs",
+    "gallery:r2:upload": "node --env-file-if-exists=.env.r2.local scripts/gallery/upload-r2-gallery.mjs --apply"
   },
   "devDependencies": {
     "@aws-sdk/client-s3": "^3.1094.0",

@@ -31,3 +31,8 @@ export function galleryImageUrl(
 ) {
   return `${normalizeBaseUrl(baseUrl)}/${normalizeGalleryImageKey(key)}`;
 }
+
+export function siteImageUrl(src) {
+  const prefix = `${DEFAULT_GALLERY_IMAGE_BASE_URL}/`;
+  return src?.startsWith(prefix) ? galleryImageUrl(decodeURIComponent(src.slice(prefix.length))) : src;
+}
