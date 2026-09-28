@@ -1,11 +1,24 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import gallery from '../../site/src/data/gallery.json' with { type: 'json' };
-import { avatars as configuredAvatars } from '../../site/src/lib/avatars.js';
+import { avatars as configuredAvatars, avatarPhotoUrl } from '../../site/src/lib/avatars.js';
 import content from '../../site/src/data/content.json' with { type: 'json' };
 import { mediaLibrary } from '../../site/src/lib/media-library.js';
 import { avatarHref, resolveAvatarRoute } from '../../site/src/lib/avatar-navigation.js';
 const avatars = [{ id:'base-a', name:'素体 A', themes:[{ id:'everyday', outfits:[{id:'standard',name:'基本コーデ'},{id:'outing',name:'お出かけコーデ'}] }] }];
+
+test('representative images resolve stored keys including unlisted CMS media', () => {
+  const photos = mediaLibrary(content, gallery);
+  const cmsPhoto = photos.find(photo => photo.id.startsWith('cms-') && !photo.listed && photo.displayKey !== `display/${photo.id}.webp`);
+  assert.ok(cmsPhoto, 'Regression fixture needs an unlisted CMS photo with a named key');
+  for (const photo of [gallery[0], cmsPhoto]) {
+    for (const thumbnail of [false, true]) {
+      const url = new URL(avatarPhotoUrl(photo.id, thumbnail));
+      assert.equal(decodeURIComponent(url.pathname), `/media/${thumbnail ? photo.thumbnailKey : photo.displayKey}`);
+    }
+  }
+  assert.equal(avatarPhotoUrl('missing-photo'), undefined);
+});
 
 test('the collection and base links do not select a theme implicitly', () => {
   assert.deepEqual(resolveAvatarRoute('', avatars), { notFound: false });

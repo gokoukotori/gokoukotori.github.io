@@ -4,8 +4,7 @@
   import SiteHeader from '../../components/SiteHeader.svelte';
   import ThreeView from '../../components/ThreeView.svelte';
   import RelatedGallery from '../../components/RelatedGallery.svelte';
-  import { avatars, isSampleContent } from '../../lib/avatars.js';
-  import { galleryImageUrl } from '../../lib/gallery-media.js';
+  import { avatars, isSampleContent, avatarPhotoUrl as photoUrl } from '../../lib/avatars.js';
   import { avatarHref, resolveAvatarRoute } from '../../lib/avatar-navigation.js';
 
   let hash = typeof window === 'undefined' ? '' : window.location.hash;
@@ -13,7 +12,6 @@
   $: route = resolveAvatarRoute(hash, avatars);
   $: ({ avatar, theme, outfit, notFound } = route);
   $: pageTitle = notFound ? 'ページが見つかりません' : theme ? `${theme.name} / ${avatar.name}` : avatar?.name ?? 'Avatars';
-  const photoUrl = (photo, thumbnail = false) => galleryImageUrl(`${thumbnail ? 'thumbnails' : 'display'}/${photo}.webp`);
   const outfitCount = (item) => item.themes.reduce((total, collection) => total + collection.outfits.length, 0);
 
   onMount(() => {
