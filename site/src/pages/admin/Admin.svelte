@@ -3,7 +3,7 @@
   import { Alert, Button, Checkbox, Fileupload, Input, Label, Modal, Textarea } from 'flowbite-svelte';
   import { mediaLibrary } from '../../lib/media-library.js';
   import { threeViews } from '../../lib/three-views.js';
-  import { photoUses } from '../../../../cms/shared/model.mjs';
+  import { duplicateTheme, photoUses } from '../../../../cms/shared/model.mjs';
   import { DEFAULT_GALLERY_IMAGE_BASE_URL, galleryImageUrl } from '../../lib/gallery-media.js';
 
   let doc, revision = '', token = '', originalPhotos = [], configured = false;
@@ -65,6 +65,13 @@
     if (type === 'avatar') { item.caption = ''; item.themes = []; doc.avatars.push(item); select(type,item); }
     else if (type === 'theme') { item.label = ''; item.credits = []; item.outfits = []; avatar.themes.push(item); select(type,avatar,item); }
     else { item.credits = []; theme.outfits.push(item); select(type,avatar,theme,item); }
+    doc = { ...doc }; changed();
+  }
+  function duplicateSelectedTheme() {
+    const copy = duplicateTheme(theme);
+    const index = avatar.themes.findIndex(item => item.id === themeId);
+    avatar.themes.splice(index + 1, 0, copy);
+    select('theme', avatar, copy);
     doc = { ...doc }; changed();
   }
   function removeSelected() {
@@ -186,7 +193,7 @@
           </nav>
           <section class="edit-card min-w-0 space-y-4 rounded-lg border bg-white p-5 shadow-sm xl:p-7 dark:bg-gray-800 border-gray-200 dark:border-gray-700">
             {#if selected}
-              <div class="section-top mb-5 flex flex-wrap items-center justify-between gap-3 [&_.eyebrow]:mb-0"><p class="eyebrow mb-2 text-xs font-semibold tracking-widest text-primary-700 dark:text-primary-300">{kind === 'avatar' ? '素体' : kind === 'theme' ? `${avatar.name} / 改変テーマ` : `${avatar.name} / ${theme.name} / バリエーション`}</p><div class="actions flex flex-wrap items-center gap-2"><Button color="alternative" size="sm" aria-label="表示順を前へ" onclick={() => moveSelected(-1)}>↑</Button><Button color="alternative" size="sm" aria-label="表示順を後ろへ" onclick={() => moveSelected(1)}>↓</Button><Button color="red" outline size="sm" onclick={removeSelected}>削除</Button></div></div>
+              <div class="section-top mb-5 flex flex-wrap items-center justify-between gap-3 [&_.eyebrow]:mb-0"><p class="eyebrow mb-2 text-xs font-semibold tracking-widest text-primary-700 dark:text-primary-300">{kind === 'avatar' ? '素体' : kind === 'theme' ? `${avatar.name} / 改変テーマ` : `${avatar.name} / ${theme.name} / バリエーション`}</p><div class="actions flex flex-wrap items-center gap-2">{#if kind === 'theme'}<Button color="alternative" size="sm" onclick={duplicateSelectedTheme}>複製</Button>{/if}<Button color="alternative" size="sm" aria-label="表示順を前へ" onclick={() => moveSelected(-1)}>↑</Button><Button color="alternative" size="sm" aria-label="表示順を後ろへ" onclick={() => moveSelected(1)}>↓</Button><Button color="red" outline size="sm" onclick={removeSelected}>削除</Button></div></div>
               <div class="identity grid grid-cols-[100px_minmax(0,1fr)] gap-4 min-[801px]:grid-cols-[120px_minmax(0,1fr)] xl:grid-cols-[160px_minmax(0,1fr)] xl:gap-6 max-[420px]:grid-cols-1"><Button color="alternative" size="sm" class="cover-picker block self-start overflow-hidden p-0 [&_img]:block [&_img]:aspect-[3/4] [&_img]:w-full [&_img]:object-cover [&_span]:block [&_span]:p-2 [&_span]:text-xs max-[420px]:max-w-40" onclick={() => openPicker('cover')}><img src={thumb(mediaById.get(selected.photo))} alt="代表写真"/><span>写真を選択</span></Button><div class="fields min-w-0"><Label class="mb-4 grid gap-2 text-sm">名前<Input value={selected.name} oninput={event => { selected.name = event.currentTarget.value; doc = { ...doc }; changed(); }}/></Label>{#if kind === 'avatar'}<Label class="mb-4 grid gap-2 text-sm">短い紹介<Input bind:value={avatar.caption} oninput={changed}/></Label>{:else if kind === 'theme'}<Label class="mb-4 grid gap-2 text-sm">英字見出し<Input bind:value={theme.label} oninput={changed} placeholder="EVERYDAY"/></Label>{/if}<Label class="mb-4 grid gap-2 text-sm">紹介・コンセプト<Textarea class="w-full min-w-0 resize-y leading-relaxed" rows="5" bind:value={selected.description} oninput={changed}></Textarea></Label></div></div>
               {#if kind === 'avatar'}
                 <div>

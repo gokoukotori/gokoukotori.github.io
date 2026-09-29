@@ -8,7 +8,7 @@ import sharp from 'sharp';
 import { CmsStore } from '../../cms/server/store.mjs';
 import { checkRequest, createCmsApi } from '../../cms/server/api.mjs';
 import { uploadPending } from '../../cms/server/r2.mjs';
-import { validateContent, photoUses } from '../../cms/shared/model.mjs';
+import { duplicateTheme, validateContent, photoUses } from '../../cms/shared/model.mjs';
 import { mediaLibrary, publicGallery } from '../../site/src/lib/media-library.js';
 import { DEFAULT_GALLERY_IMAGE_BASE_URL, galleryImageUrl } from '../../site/src/lib/gallery-media.js';
 
@@ -27,6 +27,76 @@ async function fixture(t) {
   return new CmsStore(dir);
 }
 const image = () => sharp({create:{width:1200,height:600,channels:3,background:'#448855'}}).png().toBuffer();
+
+test('theme copies retain all nested content with fresh IDs and independent edits', () => {
+  const source = structuredClone(baseline.avatars[0].themes[0]);
+  source.label = 'CUSTOM'; source.description = '保存前の編集';
+  source.credits = [{category:'髪型',name:'テーマ用ヘア',url:'https://example.com/hair'}];
+  source.outfits[0].credits = [{category:'衣装',name:'衣装の商品',url:''}];
+  source.outfits[0].additionalPhotoIds = [original[2].id, original[1].id];
+  source.outfits[0].threeView = [{src:'/first.webp',caption:'正面'}, {src:'/second.webp',caption:'背面'}];
+  source.outfits.push({...structuredClone(source.outfits[0]),id:'second',name:'別の衣装',threeView:{src:'/legacy.webp',caption:'旧形式'}});
+  const before = structuredClone(source);
+  const copies = [duplicateTheme(source), duplicateTheme(source)];
+  const ids = [source, ...source.outfits, ...copies.flatMap(copy => [copy, ...copy.outfits])].map(item => item.id);
+  assert.equal(new Set(ids).size, ids.length);
+  for (const copy of copies) {
+    assert.equal(copy.name, 'テーマ（コピー）');
+    const normalized = {...copy,id:source.id,name:source.name,outfits:copy.outfits.map((outfit,i) => ({...outfit,id:source.outfits[i].id}))};
+    assert.deepEqual(normalized, source);
+  }
+  const doc = structuredClone(baseline);
+  doc.avatars[0].themes.push(...copies);
+  validateContent(doc, original);
+  const copy = copies[0];
+  copy.name = '変更後'; copy.description = '変更後'; copy.photo = original[1].id;
+  copy.credits[0].name = '別の髪型';
+  copy.outfits[0].credits[0].name = '別の商品';
+  copy.outfits[0].additionalPhotoIds.reverse();
+  copy.outfits[0].galleryPhotoIds.length = 0;
+  copy.outfits[0].threeView[0].caption = '別の説明';
+  copy.outfits[1].threeView.src = '/changed.webp';
+  copy.outfits.pop();
+  assert.deepEqual(source, before);
+  assert.equal(copies[1].outfits[0].threeView[0].caption, '正面');
+});
+
+test('duplicated themes save and reload with shared image references and survive source deletion', async t => {
+  const store = await fixture(t);
+  let state = await store.read();
+  state = await store.importImage(await image(), 'theme.png', '2026-09-27T00:00:00Z', state.revision);
+  const photo = state.content.media[0];
+  const source = state.content.avatars[0].themes[0];
+  source.photo = photo.id;
+  source.outfits[0].additionalPhotoIds = [photo.id];
+  const before = structuredClone(source);
+  const mediaBefore = structuredClone(state.content.media);
+  const copy = duplicateTheme(source);
+  state.content.avatars[0].themes.push(copy);
+  state = await store.save(state.content, state.revision);
+  assert.deepEqual(state.content.avatars[0].themes, [before, copy]);
+  assert.deepEqual(state.content.media, mediaBefore);
+  state.content.avatars[0].themes.splice(0, 1);
+  state = await store.save(state.content, state.revision);
+  const reloaded = await store.read();
+  assert.deepEqual(reloaded.content.avatars[0].themes, [copy]);
+  assert.deepEqual(reloaded.content.media, mediaBefore);
+  await assert.rejects(store.removePendingImage(photo.id, state.revision), /使用中/);
+});
+
+test('empty themes and names at the length limit can be duplicated', () => {
+  const doc = structuredClone(baseline);
+  const source = doc.avatars[0].themes[0];
+  source.outfits = []; source.name = 'あ'.repeat(10000);
+  const copy = duplicateTheme(source);
+  assert.equal(copy.name.length, 10000);
+  assert.ok(copy.name.endsWith('（コピー）'));
+  assert.deepEqual(copy.outfits, []);
+  assert.notEqual(copy.outfits, source.outfits);
+  assert.equal('credits' in copy, false);
+  doc.avatars[0].themes.push(copy);
+  validateContent(doc, original);
+});
 
 test('additional main images save in order independently of related photos, three views, and gallery listing', async t => {
   const store = await fixture(t);

@@ -2,6 +2,15 @@ import { mediaLibrary } from '../../site/src/lib/media-library.js';
 import { threeViews } from '../../site/src/lib/three-views.js';
 import { normalizeGalleryImageKey } from '../../site/src/lib/gallery-media.js';
 
+export function duplicateTheme(theme) {
+  const copy = structuredClone(theme);
+  const suffix = '（コピー）';
+  copy.id = `theme-${crypto.randomUUID()}`;
+  copy.name = `${theme.name.slice(0, 10000 - suffix.length)}${suffix}`;
+  for (const outfit of copy.outfits) outfit.id = `outfit-${crypto.randomUUID()}`;
+  return copy;
+}
+
 export function namedMediaKeys(name) {
   if (typeof name !== 'string' || !name || name.length > 255 || /[\/\\\x00-\x1f\x7f]/.test(name)) throw new Error('元ファイル名が不正です。');
   const stem = name.replace(/\.(?:jpe?g|png|webp)$/i, '');

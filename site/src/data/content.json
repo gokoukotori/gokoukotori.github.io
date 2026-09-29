@@ -979,6 +979,181 @@
               ]
             }
           ]
+        },
+        {
+          "id": "theme-b4d5eb58",
+          "name": "髪型を使いたかったけれど髪型のせいでだれかさんに見えてどうしようもない残骸",
+          "photo": "cms-762b5c0452a73c5d32497c2a2e4af541",
+          "description": "",
+          "label": "",
+          "credits": [
+            {
+              "category": "髪型",
+              "name": "Halo Ring Hair",
+              "url": "https://booth.pm/ja/items/8457461"
+            },
+            {
+              "category": "ボディテクスチャ",
+              "name": "【シフォン(Chiffon)専用 】Cherry Blossom Rain Eye+Makeup+Body texture+Material[HD-PSD]",
+              "url": "https://booth.pm/ja/items/5413521"
+            },
+            {
+              "category": "メイクテクスチャ",
+              "name": "【Chiffon対応】Mochix2Eye＆Makeup texture＋Face animation",
+              "url": "https://booth.pm/ja/items/8391022"
+            },
+            {
+              "category": "アイテクスチャ",
+              "name": "Sky Flare Eye Textures",
+              "url": "https://booth.pm/ja/items/7572959"
+            },
+            {
+              "category": "アクセサリ",
+              "name": "スイカバー【自作】",
+              "url": ""
+            }
+          ],
+          "outfits": [
+            {
+              "id": "outfit-456f5691",
+              "name": "デフォルト服",
+              "photo": "cms-762b5c0452a73c5d32497c2a2e4af541",
+              "description": "",
+              "credits": [
+                {
+                  "category": "衣装",
+                  "name": "【Chiffon/シフォン】 AREN_Cloth Texture",
+                  "url": "https://booth.pm/ja/items/5648369"
+                }
+              ],
+              "threeView": [
+                {
+                  "src": "https://media.gokoukotori.com/media/display/62.%E3%82%B7%E3%83%95%E3%82%A9%E3%83%B3_%E9%AB%AA%E5%9E%8B%E3%82%92%E4%BD%BF%E3%81%84%E3%81%9F%E3%81%8B%E3%81%A3%E3%81%9F%E3%81%91%E3%82%8C%E3%81%A9%E9%AB%AA%E5%9E%8B%E3%81%AE%E3%81%9B%E3%81%84%E3%81%A7%E3%81%A0%E3%82%8C%E3%81%8B%E3%81%95%E3%82%93%E3%81%AB%E8%A6%8B%E3%81%88%E3%81%A6%E3%81%A9%E3%81%86%E3%81%97%E3%82%88%E3%81%86%E3%82%82%E3%81%AA%E3%81%84%E6%AE%8B%E9%AA%B8_%E3%83%87%E3%83%95%E3%82%A9%E3%83%AB%E3%83%88_three-view.webp"
+                }
+              ]
+            },
+            {
+              "id": "outfit-cda16b81",
+              "name": "Re:うさぎさんるーむうぇあ",
+              "photo": "cms-45c4f7413df1e33fcfc16f6c38999a22",
+              "description": "",
+              "credits": [
+                {
+                  "category": "衣装",
+                  "name": "Re:うさぎさんるーむうぇあ",
+                  "url": "https://booth.pm/ja/items/5657072"
+                }
+              ],
+              "threeView": [
+                {
+                  "src": "https://media.gokoukotori.com/media/display/62.%E3%82%B7%E3%83%95%E3%82%A9%E3%83%B3_%E9%AB%AA%E5%9E%8B%E3%82%92%E4%BD%BF%E3%81%84%E3%81%9F%E3%81%8B%E3%81%A3%E3%81%9F%E3%81%91%E3%82%8C%E3%81%A9%E9%AB%AA%E5%9E%8B%E3%81%AE%E3%81%9B%E3%81%84%E3%81%A7%E3%81%A0%E3%82%8C%E3%81%8B%E3%81%95%E3%82%93%E3%81%AB%E8%A6%8B%E3%81%88%E3%81%A6%E3%81%A9%E3%81%86%E3%81%97%E3%82%88%E3%81%86%E3%82%82%E3%81%AA%E3%81%84%E6%AE%8B%E9%AA%B8_%E3%81%86%E3%81%95%E3%81%8E%E3%81%95%E3%82%93%E3%82%8B%E3%83%BC%E3%82%80%E3%81%86%E3%81%87%E3%81%82_three-view.webp"
+                }
+              ]
+            },
+            {
+              "id": "outfit-e911b453",
+              "name": "Asterielm",
+              "photo": "cms-0bbc8ec366f8e6fe8494a3ff06ac40fe",
+              "description": "",
+              "credits": [
+                {
+                  "category": "衣装",
+                  "name": "Asterielm",
+                  "url": "https://booth.pm/ja/items/8822218"
+                }
+              ],
+              "threeView": [
+                {
+                  "src": "https://media.gokoukotori.com/media/display/62.%E3%82%B7%E3%83%95%E3%82%A9%E3%83%B3_%E9%AB%AA%E5%9E%8B%E3%82%92%E4%BD%BF%E3%81%84%E3%81%9F%E3%81%8B%E3%81%A3%E3%81%9F%E3%81%91%E3%82%8C%E3%81%A9%E9%AB%AA%E5%9E%8B%E3%81%AE%E3%81%9B%E3%81%84%E3%81%A7%E3%81%A0%E3%82%8C%E3%81%8B%E3%81%95%E3%82%93%E3%81%AB%E8%A6%8B%E3%81%88%E3%81%A6%E3%81%A9%E3%81%86%E3%81%97%E3%82%88%E3%81%86%E3%82%82%E3%81%AA%E3%81%84%E6%AE%8B%E9%AA%B8_Asterielm_three-view.webp"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "theme-7bebc5fc-16d6-4bf0-9ea6-027036f79154",
+          "name": "髪型を変えて姉妹のような感じで",
+          "photo": "cms-53595e2424417fa65112bf3957f9e6fa",
+          "description": "",
+          "label": "",
+          "credits": [
+            {
+              "category": "髪型",
+              "name": "kurage long",
+              "url": "https://booth.pm/ja/items/8036193"
+            },
+            {
+              "category": "ボディテクスチャ",
+              "name": "【シフォン(Chiffon)専用 】Cherry Blossom Rain Eye+Makeup+Body texture+Material[HD-PSD]",
+              "url": "https://booth.pm/ja/items/5413521"
+            },
+            {
+              "category": "メイクテクスチャ",
+              "name": "【Chiffon対応】Mochix2Eye＆Makeup texture＋Face animation",
+              "url": "https://booth.pm/ja/items/8391022"
+            },
+            {
+              "category": "アイテクスチャ",
+              "name": "Sky Flare Eye Textures",
+              "url": "https://booth.pm/ja/items/7572959"
+            }
+          ],
+          "outfits": [
+            {
+              "id": "outfit-d3274693-fd73-42ce-9c05-321ed2839cd3",
+              "name": "デフォルト服",
+              "photo": "cms-53595e2424417fa65112bf3957f9e6fa",
+              "description": "",
+              "credits": [
+                {
+                  "category": "衣装",
+                  "name": "【Chiffon/シフォン】 AREN_Cloth Texture",
+                  "url": "https://booth.pm/ja/items/5648369"
+                }
+              ],
+              "threeView": [
+                {
+                  "src": "https://media.gokoukotori.com/media/display/63.%E3%82%B7%E3%83%95%E3%82%A9%E3%83%B3_%E9%AB%AA%E5%9E%8B%E3%82%92%E5%A4%89%E3%81%88%E3%81%A6%E5%A7%89%E5%A6%B9%E3%81%AE%E3%82%88%E3%81%86%E3%81%AA%E6%84%9F%E3%81%98%E3%81%A7_%E3%83%87%E3%83%95%E3%82%A9%E3%83%AB%E3%83%88_three-view.webp"
+                }
+              ]
+            },
+            {
+              "id": "outfit-2263c695-fba3-474b-ab52-f2c7fce11c32",
+              "name": "Re:うさぎさんるーむうぇあ",
+              "photo": "cms-c0a60eb0a15f517a16f24f68118edbe3",
+              "description": "",
+              "credits": [
+                {
+                  "category": "衣装",
+                  "name": "Re:うさぎさんるーむうぇあ",
+                  "url": "https://booth.pm/ja/items/5657072"
+                }
+              ],
+              "threeView": [
+                {
+                  "src": "https://media.gokoukotori.com/media/display/63.%E3%82%B7%E3%83%95%E3%82%A9%E3%83%B3_%E9%AB%AA%E5%9E%8B%E3%82%92%E5%A4%89%E3%81%88%E3%81%A6%E5%A7%89%E5%A6%B9%E3%81%AE%E3%82%88%E3%81%86%E3%81%AA%E6%84%9F%E3%81%98%E3%81%A7_%E3%81%86%E3%81%95%E3%81%8E%E3%81%95%E3%82%93%E3%82%8B%E3%83%BC%E3%82%80%E3%81%86%E3%81%87%E3%81%82_three-view.webp"
+                }
+              ]
+            },
+            {
+              "id": "outfit-131ec890-9816-45da-835e-2c6c78cf35a8",
+              "name": "Asterielm",
+              "photo": "cms-13f565b4f5419d404ca0955e9450d2be",
+              "description": "",
+              "credits": [
+                {
+                  "category": "衣装",
+                  "name": "Asterielm",
+                  "url": "https://booth.pm/ja/items/8822218"
+                }
+              ],
+              "threeView": [
+                {
+                  "src": "https://media.gokoukotori.com/media/display/63.%E3%82%B7%E3%83%95%E3%82%A9%E3%83%B3_%E9%AB%AA%E5%9E%8B%E3%82%92%E5%A4%89%E3%81%88%E3%81%A6%E5%A7%89%E5%A6%B9%E3%81%AE%E3%82%88%E3%81%86%E3%81%AA%E6%84%9F%E3%81%98%E3%81%A7_Asterielm_three-view.webp"
+                }
+              ]
+            }
+          ]
         }
       ],
       "sourceUrl": "https://booth.pm/ja/items/5354471"
@@ -4996,6 +5171,126 @@
       "height": 1280,
       "uploaded": true,
       "originalName": "18.シフォン_しなの_デフォルト耳_デフォルト_three-view.png"
+    },
+    {
+      "id": "cms-0bbc8ec366f8e6fe8494a3ff06ac40fe",
+      "capturedAt": "2026-09-29T09:40:02.621Z",
+      "displayKey": "display/62.シフォン_髪型を使いたかったけれど髪型のせいでだれかさんに見えてどうしようもない残骸_Asterielm_face.webp",
+      "thumbnailKey": "thumbnails/62.シフォン_髪型を使いたかったけれど髪型のせいでだれかさんに見えてどうしようもない残骸_Asterielm_face.webp",
+      "width": 2048,
+      "height": 2048,
+      "uploaded": true,
+      "originalName": "62.シフォン_髪型を使いたかったけれど髪型のせいでだれかさんに見えてどうしようもない残骸_Asterielm_face.png"
+    },
+    {
+      "id": "cms-1e75e37f15ffbb9d9621f7edcab59019",
+      "capturedAt": "2026-09-29T09:40:03.465Z",
+      "displayKey": "display/62.シフォン_髪型を使いたかったけれど髪型のせいでだれかさんに見えてどうしようもない残骸_Asterielm_three-view.webp",
+      "thumbnailKey": "thumbnails/62.シフォン_髪型を使いたかったけれど髪型のせいでだれかさんに見えてどうしようもない残骸_Asterielm_three-view.webp",
+      "width": 3840,
+      "height": 1280,
+      "uploaded": true,
+      "originalName": "62.シフォン_髪型を使いたかったけれど髪型のせいでだれかさんに見えてどうしようもない残骸_Asterielm_three-view.png"
+    },
+    {
+      "id": "cms-45c4f7413df1e33fcfc16f6c38999a22",
+      "capturedAt": "2026-09-29T09:39:57.319Z",
+      "displayKey": "display/62.シフォン_髪型を使いたかったけれど髪型のせいでだれかさんに見えてどうしようもない残骸_うさぎさんるーむうぇあ_face.webp",
+      "thumbnailKey": "thumbnails/62.シフォン_髪型を使いたかったけれど髪型のせいでだれかさんに見えてどうしようもない残骸_うさぎさんるーむうぇあ_face.webp",
+      "width": 2048,
+      "height": 2048,
+      "uploaded": true,
+      "originalName": "62.シフォン_髪型を使いたかったけれど髪型のせいでだれかさんに見えてどうしようもない残骸_うさぎさんるーむうぇあ_face.png"
+    },
+    {
+      "id": "cms-edb815cda7f7fa5c078afe8c0230cb15",
+      "capturedAt": "2026-09-29T09:39:58.299Z",
+      "displayKey": "display/62.シフォン_髪型を使いたかったけれど髪型のせいでだれかさんに見えてどうしようもない残骸_うさぎさんるーむうぇあ_three-view.webp",
+      "thumbnailKey": "thumbnails/62.シフォン_髪型を使いたかったけれど髪型のせいでだれかさんに見えてどうしようもない残骸_うさぎさんるーむうぇあ_three-view.webp",
+      "width": 3840,
+      "height": 1280,
+      "uploaded": true,
+      "originalName": "62.シフォン_髪型を使いたかったけれど髪型のせいでだれかさんに見えてどうしようもない残骸_うさぎさんるーむうぇあ_three-view.png"
+    },
+    {
+      "id": "cms-762b5c0452a73c5d32497c2a2e4af541",
+      "capturedAt": "2026-09-29T09:39:49.378Z",
+      "displayKey": "display/62.シフォン_髪型を使いたかったけれど髪型のせいでだれかさんに見えてどうしようもない残骸_デフォルト_face.webp",
+      "thumbnailKey": "thumbnails/62.シフォン_髪型を使いたかったけれど髪型のせいでだれかさんに見えてどうしようもない残骸_デフォルト_face.webp",
+      "width": 2048,
+      "height": 2048,
+      "uploaded": true,
+      "originalName": "62.シフォン_髪型を使いたかったけれど髪型のせいでだれかさんに見えてどうしようもない残骸_デフォルト_face.png"
+    },
+    {
+      "id": "cms-e2998794de3e142553caffca509d6c97",
+      "capturedAt": "2026-09-29T09:39:50.171Z",
+      "displayKey": "display/62.シフォン_髪型を使いたかったけれど髪型のせいでだれかさんに見えてどうしようもない残骸_デフォルト_three-view.webp",
+      "thumbnailKey": "thumbnails/62.シフォン_髪型を使いたかったけれど髪型のせいでだれかさんに見えてどうしようもない残骸_デフォルト_three-view.webp",
+      "width": 3840,
+      "height": 1280,
+      "uploaded": true,
+      "originalName": "62.シフォン_髪型を使いたかったけれど髪型のせいでだれかさんに見えてどうしようもない残骸_デフォルト_three-view.png"
+    },
+    {
+      "id": "cms-16f7c8076f95118aef93858e626e9213",
+      "capturedAt": "2026-09-29T10:43:23.214Z",
+      "displayKey": "display/63.シフォン_髪型を変えて姉妹のような感じで_Asterielm_three-view.webp",
+      "thumbnailKey": "thumbnails/63.シフォン_髪型を変えて姉妹のような感じで_Asterielm_three-view.webp",
+      "width": 3840,
+      "height": 1280,
+      "uploaded": true,
+      "originalName": "63.シフォン_髪型を変えて姉妹のような感じで_Asterielm_three-view.png"
+    },
+    {
+      "id": "cms-c0a60eb0a15f517a16f24f68118edbe3",
+      "capturedAt": "2026-09-29T10:43:08.955Z",
+      "displayKey": "display/63.シフォン_髪型を変えて姉妹のような感じで_うさぎさんるーむうぇあ_face.webp",
+      "thumbnailKey": "thumbnails/63.シフォン_髪型を変えて姉妹のような感じで_うさぎさんるーむうぇあ_face.webp",
+      "width": 2048,
+      "height": 2048,
+      "uploaded": true,
+      "originalName": "63.シフォン_髪型を変えて姉妹のような感じで_うさぎさんるーむうぇあ_face.png"
+    },
+    {
+      "id": "cms-260a1f7dc6e63dd6c208ed4e098ea03e",
+      "capturedAt": "2026-09-29T10:43:09.741Z",
+      "displayKey": "display/63.シフォン_髪型を変えて姉妹のような感じで_うさぎさんるーむうぇあ_three-view.webp",
+      "thumbnailKey": "thumbnails/63.シフォン_髪型を変えて姉妹のような感じで_うさぎさんるーむうぇあ_three-view.webp",
+      "width": 3840,
+      "height": 1280,
+      "uploaded": true,
+      "originalName": "63.シフォン_髪型を変えて姉妹のような感じで_うさぎさんるーむうぇあ_three-view.png"
+    },
+    {
+      "id": "cms-53595e2424417fa65112bf3957f9e6fa",
+      "capturedAt": "2026-09-29T10:43:03.787Z",
+      "displayKey": "display/63.シフォン_髪型を変えて姉妹のような感じで_デフォルト_face.webp",
+      "thumbnailKey": "thumbnails/63.シフォン_髪型を変えて姉妹のような感じで_デフォルト_face.webp",
+      "width": 2048,
+      "height": 2048,
+      "uploaded": true,
+      "originalName": "63.シフォン_髪型を変えて姉妹のような感じで_デフォルト_face.png"
+    },
+    {
+      "id": "cms-83b3d8446c71442c9b48473b899287c5",
+      "capturedAt": "2026-09-29T10:43:04.648Z",
+      "displayKey": "display/63.シフォン_髪型を変えて姉妹のような感じで_デフォルト_three-view.webp",
+      "thumbnailKey": "thumbnails/63.シフォン_髪型を変えて姉妹のような感じで_デフォルト_three-view.webp",
+      "width": 3840,
+      "height": 1280,
+      "uploaded": true,
+      "originalName": "63.シフォン_髪型を変えて姉妹のような感じで_デフォルト_three-view.png"
+    },
+    {
+      "id": "cms-13f565b4f5419d404ca0955e9450d2be",
+      "capturedAt": "2026-09-29T10:43:22.320Z",
+      "displayKey": "display/63.シフォン_髪型を変えて姉妹のような感じで_Asterielm_face.webp",
+      "thumbnailKey": "thumbnails/63.シフォン_髪型を変えて姉妹のような感じで_Asterielm_face.webp",
+      "width": 2048,
+      "height": 2048,
+      "uploaded": true,
+      "originalName": "63.シフォン_髪型を変えて姉妹のような感じで_Asterielm_face.png"
     }
   ],
   "photoSettings": {}
