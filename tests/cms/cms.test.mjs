@@ -28,6 +28,53 @@ async function fixture(t) {
 }
 const image = () => sharp({create:{width:1200,height:600,channels:3,background:'#448855'}}).png().toBuffer();
 
+test('additional main images save in order independently of related photos, three views, and gallery listing', async t => {
+  const store = await fixture(t);
+  let state = await store.read();
+  const outfit = state.content.avatars[0].themes[0].outfits[0];
+  outfit.threeView = [{src:'/three.webp',caption:'三面図'}];
+  outfit.additionalPhotoIds = [original[2].id, original[1].id];
+  state.content.photoSettings[original[2].id] = {listed:false};
+  state = await store.save(state.content, state.revision);
+  const saved = state.content.avatars[0].themes[0].outfits[0];
+  assert.deepEqual(saved.additionalPhotoIds, [original[2].id,original[1].id]);
+  assert.deepEqual(saved.galleryPhotoIds, baseline.avatars[0].themes[0].outfits[0].galleryPhotoIds);
+  assert.deepEqual(saved.threeView, outfit.threeView);
+  assert.ok(!publicGallery(state.content, original).some(photo => photo.id === original[2].id));
+  assert.ok(photoUses(state.content, original[2].id).some(use => use.endsWith('の追加メイン画像')));
+  saved.additionalPhotoIds.reverse();
+  state = await store.save(state.content, state.revision);
+  assert.deepEqual(state.content.avatars[0].themes[0].outfits[0].additionalPhotoIds, [original[1].id,original[2].id]);
+  state.content.avatars[0].themes[0].outfits[0].additionalPhotoIds = [];
+  await store.save(state.content, state.revision);
+  assert.deepEqual((await store.read()).content.avatars[0].themes[0].outfits[0].additionalPhotoIds, []);
+});
+
+test('invalid or duplicate additional main images are rejected without saving', async t => {
+  const store = await fixture(t), state = await store.read();
+  for (const additionalPhotoIds of [null, false, 'photo', ['missing'], [original[1].id,original[1].id]]) {
+    const doc = structuredClone(state.content);
+    doc.avatars[0].themes[0].outfits[0].additionalPhotoIds = additionalPhotoIds;
+    await assert.rejects(store.save(doc, state.revision), /追加メイン画像/);
+    assert.equal((await store.read()).revision, state.revision);
+  }
+});
+
+test('an unlisted pending image used only as an additional main image cannot be canceled', async t => {
+  const store = await fixture(t), before = await store.read();
+  let state = await store.importImage(await image(), 'main.png', '2026-09-27T00:00:00Z', before.revision);
+  const photo = state.content.media[0];
+  state.content.avatars[0].themes[0].outfits[0].additionalPhotoIds = [photo.id];
+  state = await store.save(state.content, state.revision);
+  await assert.rejects(store.removePendingImage(photo.id, state.revision), /使用中/);
+  assert.equal((await store.read()).revision, state.revision);
+  assert.ok((await readFile(path.join(store.root, '.cms/media', photo.displayKey))).length);
+  state.content.avatars[0].themes[0].outfits[0].additionalPhotoIds = [];
+  state = await store.save(state.content, state.revision);
+  const removed = await store.removePendingImage(photo.id, state.revision);
+  assert.equal(removed.content.media.length, 0);
+});
+
 test('multiple three views persist in order, validate every entry, and protect referenced photos', async t => {
   const store = await fixture(t), state = await store.read();
   const outfit = state.content.avatars[0].themes[0].outfits[0];

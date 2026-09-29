@@ -4,6 +4,7 @@
   import SiteHeader from '../../components/SiteHeader.svelte';
   import ThreeView from '../../components/ThreeView.svelte';
   import RelatedGallery from '../../components/RelatedGallery.svelte';
+  import OutfitPhotos from '../../components/OutfitPhotos.svelte';
   import { avatars, isSampleContent, avatarPhotoUrl as photoUrl } from '../../lib/avatars.js';
   import { avatarHref, resolveAvatarRoute } from '../../lib/avatar-navigation.js';
 
@@ -126,7 +127,9 @@
         {/snippet}
         {#if outfit}
           <div class="outfit-layout grid items-start gap-6 sm:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] sm:gap-7 lg:gap-12">
-            <div class="outfit-photo overflow-hidden rounded-lg sm:sticky sm:top-22 bg-gray-100 dark:bg-gray-700 [&_img]:w-full [&_img]:h-[55vh] [&_img]:min-h-[300px] [&_img]:object-contain sm:[&_img]:h-[min(720px,78vh)]"><img src={photoUrl(outfit.photo)} alt={`${avatar.name}・${theme.name}・${outfit.name}`} /></div>
+            {#key outfit}
+              <OutfitPhotos {outfit} name={`${avatar.name}・${theme.name}・${outfit.name}`} />
+            {/key}
             <div class="outfit-panel min-w-0 pt-2">
               <p class="eyebrow text-xs font-semibold tracking-widest text-primary-700 dark:text-primary-300">VARIATIONS <span class="muted text-sm leading-relaxed text-gray-600 dark:text-gray-400">/ {String(theme.outfits.length).padStart(2, '0')}</span></p>
               <h2 class="wardrobe-title mt-2 mb-6 text-xl font-medium">バリエーション</h2>

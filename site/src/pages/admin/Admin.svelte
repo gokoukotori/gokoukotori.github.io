@@ -21,6 +21,9 @@
   $: selectedMedia = mediaById.get(selectedMediaId);
   $: filtered = library.filter(photo => `${photo.id} ${photo.originalName || ''}`.toLowerCase().includes(search.toLowerCase()));
   $: pickerPhotos = library.filter(photo => (pickerMode !== 'related' || photo.listed) && `${photo.id} ${photo.originalName || ''}`.toLowerCase().includes(pickerSearch.toLowerCase()));
+  $: pickerMultiple = pickerMode === 'related' || pickerMode === 'main';
+  $: pickerSelection = (pickerMode === 'main' ? outfit?.additionalPhotoIds : outfit?.galleryPhotoIds) || [];
+  $: pickerTitle = pickerMode === 'related' ? '関連フォトを選ぶ' : pickerMode === 'main' ? '追加メイン画像を選ぶ' : '写真を選ぶ';
   $: pending = doc?.media.filter(photo => !photo.uploaded) || [];
   $: previewHref = avatar ? `/avatars/#/${[avatar.id, ...(theme ? [theme.id] : []), ...(outfit ? [outfit.id] : [])].join('/')}` : '/avatars/';
   const thumb = photo => galleryImageUrl(photo.thumbnailKey, '/__cms/media');
@@ -90,9 +93,11 @@
     doc = { ...doc }; changed();
   }
   function choose(photo) {
-    if (pickerMode === 'related') {
-      const ids = outfit.galleryPhotoIds || [];
-      outfit.galleryPhotoIds = ids.includes(photo.id) ? ids.filter(id => id !== photo.id) : [...ids,photo.id];
+    if (pickerMultiple) {
+      if (pickerMode === 'main' && photo.id === outfit.photo) return;
+      const field = pickerMode === 'main' ? 'additionalPhotoIds' : 'galleryPhotoIds';
+      const ids = outfit[field] || [];
+      outfit[field] = ids.includes(photo.id) ? ids.filter(id => id !== photo.id) : [...ids,photo.id];
     } else {
       if (pickerMode === 'three') {
         const views = [...threeViews(outfit.threeView)];
@@ -100,7 +105,10 @@
         views[index] = { ...views[index], src:full(photo) };
         outfit.threeView = views;
       }
-      else selected.photo = photo.id;
+      else {
+        selected.photo = photo.id;
+        if (kind === 'outfit' && outfit.additionalPhotoIds) outfit.additionalPhotoIds = outfit.additionalPhotoIds.filter(id => id !== photo.id);
+      }
       pickerOpen = false;
     }
     doc = { ...doc }; changed();
@@ -188,6 +196,30 @@
                 </div>
               {/if}
               {#if kind === 'outfit'}
+                <section class="form-section mt-7 border-t border-gray-200 pt-6 dark:border-gray-700" aria-labelledby="main-photos-title">
+                  <div class="mb-5 flex flex-wrap items-center justify-between gap-3">
+                    <h2 id="main-photos-title" class="text-lg font-semibold">追加メイン画像 <small class="text-xs font-normal text-gray-500">任意・複数枚</small></h2>
+                    <Button color="alternative" size="sm" onclick={() => openPicker('main')}>画像を選ぶ</Button>
+                  </div>
+                  <p class="text-xs leading-relaxed text-gray-600 dark:text-gray-400">このバリエーションの大きな画像エリアで、代表写真に続けて表示します。複数枚になると下部のサムネイルから切り替えられます。ギャラリー非掲載の画像も選択できます。</p>
+                  <div class="mt-4 flex flex-wrap gap-3">
+                    <div class="w-32 overflow-hidden rounded border border-gray-200 bg-gray-50 dark:border-gray-700 dark:bg-gray-700">
+                      <img class="size-32 object-contain" src={thumb(mediaById.get(outfit.photo))} alt="メイン画像 1（代表写真）" />
+                      <p class="p-2 text-center text-xs text-gray-600 dark:text-gray-300">1 · 代表写真</p>
+                    </div>
+                    {#each outfit.additionalPhotoIds || [] as id,index (id)}
+                      <div class="w-32 overflow-hidden rounded border border-gray-200 bg-gray-50 dark:border-gray-700 dark:bg-gray-700">
+                        <img class="size-32 object-contain" src={thumb(mediaById.get(id))} alt={`メイン画像 ${index + 2}`} />
+                        <p class="pt-2 text-center text-xs text-gray-600 dark:text-gray-300">{index + 2}</p>
+                        <div class="flex justify-center gap-0.5 p-1">
+                          <Button color="alternative" size="xs" aria-label={`メイン画像 ${index+2}を前へ`} disabled={index === 0} onclick={() => reorder(outfit.additionalPhotoIds,index,index-1)}>←</Button>
+                          <Button color="alternative" size="xs" aria-label={`メイン画像 ${index+2}を後ろへ`} disabled={index === outfit.additionalPhotoIds.length-1} onclick={() => reorder(outfit.additionalPhotoIds,index,index+1)}>→</Button>
+                          <Button color="alternative" size="xs" aria-label={`メイン画像 ${index+2}を解除`} onclick={() => {outfit.additionalPhotoIds=outfit.additionalPhotoIds.filter(value=>value!==id);doc={...doc};changed();}}>×</Button>
+                        </div>
+                      </div>
+                    {/each}
+                  </div>
+                </section>
                 <section class="form-section mt-7 border-t pt-6 border-gray-200 dark:border-gray-700"><div class="section-top mb-5 flex flex-wrap items-center justify-between gap-3 [&_.eyebrow]:mb-0"><h2 class="text-lg font-semibold [&_small]:ml-2 [&_small]:text-xs [&_small]:font-normal [&_small]:text-gray-500">関連フォト</h2><Button color="alternative" size="sm" onclick={() => openPicker('related')}>写真を選ぶ</Button></div><p class="hint text-xs leading-relaxed text-gray-600 dark:text-gray-400">ドラッグ、または左右ボタンで並べ替え。拡大表示もこの順番になります。</p>
                   <div class="related-strip mt-4 flex flex-wrap gap-3">{#each outfit.galleryPhotoIds || [] as id,index (id)}<div class="related-item w-32 overflow-hidden rounded border bg-gray-50 dark:bg-gray-700 border-gray-200 dark:border-gray-700 [&_img]:size-32 [&_img]:object-cover [&>div]:flex [&>div]:justify-center [&>div]:gap-0.5 [&>div]:p-1 [&_button]:px-2 [&_button]:py-1" draggable="true" role="listitem" ondragstart={() => dragIndex=index} ondragend={() => dragIndex=null} ondragover={event => event.preventDefault()} ondrop={event => {event.preventDefault();reorder(outfit.galleryPhotoIds,dragIndex,index);dragIndex=null;}}><img src={thumb(mediaById.get(id))} alt={`関連写真 ${index+1}`}/><div><Button color="alternative" size="sm" aria-label={`関連写真 ${index+1}を前へ`} disabled={index === 0} onclick={() => reorder(outfit.galleryPhotoIds,index,index-1)}>←</Button><Button color="alternative" size="sm" aria-label={`関連写真 ${index+1}を後ろへ`} disabled={index === outfit.galleryPhotoIds.length-1} onclick={() => reorder(outfit.galleryPhotoIds,index,index+1)}>→</Button><Button color="alternative" size="sm" aria-label={`関連写真 ${index+1}を解除`} onclick={() => {outfit.galleryPhotoIds=outfit.galleryPhotoIds.filter(value=>value!==id);doc={...doc};changed();}}>×</Button></div></div>{/each}</div>
                 </section>
@@ -236,4 +268,24 @@
   </main>
 </div>
 
-<Modal bind:open={pickerOpen} size="lg" dismissable={false} aria-label={pickerMode === 'related' ? '関連フォトを選ぶ' : '写真を選ぶ'} class="picker w-[92vw] max-w-4xl backdrop:backdrop-blur-sm" classes={{ body: 'max-h-[85dvh]' }}><div class="section-top mb-5 flex flex-wrap items-center justify-between gap-3 [&_.eyebrow]:mb-0"><div><p class="eyebrow mb-2 text-xs font-semibold tracking-widest text-primary-700 dark:text-primary-300">MEDIA LIBRARY</p><h2 class="text-lg font-semibold [&_small]:ml-2 [&_small]:text-xs [&_small]:font-normal [&_small]:text-gray-500">{pickerMode==='related' ? '関連フォトを選ぶ' : '写真を選ぶ'}</h2></div><Button color="alternative" size="sm" onclick={()=>pickerOpen = false}>完了 ×</Button></div><p class="hint text-xs leading-relaxed text-gray-600 dark:text-gray-400">{pickerMode==='related' ? '掲載中の写真から複数選択できます。選択順で追加されます。' : '写真をクリックして設定します。'}</p><Input class="search mb-4" aria-label="選択する写真を検索" placeholder="ファイル名で検索…" bind:value={pickerSearch} oninput={()=>pickerPage=0}/><div class="picker-grid grid grid-cols-3 gap-3 sm:grid-cols-6 [&_button]:relative [&_button]:block [&_button]:min-w-0 [&_button]:overflow-hidden [&_button]:p-1 [&_button[aria-pressed=true]]:border-primary-500 [&_button[aria-pressed=true]]:ring-2 [&_button[aria-pressed=true]]:ring-primary-500 [&_img]:block [&_img]:aspect-[4/5] [&_img]:w-full [&_img]:rounded [&_img]:object-cover">{#each pickerPhotos.slice(pickerPage*36,pickerPage*36+36) as photo (photo.id)}<Button color="alternative" size="sm" aria-pressed={pickerMode==='related' ? outfit?.galleryPhotoIds?.includes(photo.id) || false : undefined} onclick={()=>choose(photo)}><img src={thumb(photo)} alt={photo.originalName || photo.id} loading="lazy"/>{#if pickerMode==='related' && outfit?.galleryPhotoIds?.includes(photo.id)}<span class="selected-mark absolute top-2 left-2 rounded-full bg-primary-700 px-2 py-1 text-xs text-white">✓ {outfit.galleryPhotoIds.indexOf(photo.id)+1}</span>{/if}</Button>{/each}</div><div class="pager mt-5 flex items-center justify-center gap-4 text-xs text-gray-600 dark:text-gray-400"><Button color="alternative" size="sm" disabled={pickerPage===0} onclick={()=>pickerPage--}>前へ</Button><span>{pickerPage+1} / {Math.max(1,Math.ceil(pickerPhotos.length/36))}</span><Button color="alternative" size="sm" disabled={(pickerPage+1)*36>=pickerPhotos.length} onclick={()=>pickerPage++}>次へ</Button></div></Modal>
+<Modal bind:open={pickerOpen} size="lg" dismissable={false} aria-label={pickerTitle} class="picker w-[92vw] max-w-4xl backdrop:backdrop-blur-sm" classes={{ body: 'max-h-[85dvh]' }}>
+  <div class="mb-5 flex flex-wrap items-center justify-between gap-3">
+    <div><p class="mb-2 text-xs font-semibold tracking-widest text-primary-700 dark:text-primary-300">MEDIA LIBRARY</p><h2 class="text-lg font-semibold">{pickerTitle}</h2></div>
+    <Button color="alternative" size="sm" onclick={()=>pickerOpen = false}>完了 ×</Button>
+  </div>
+  <p class="text-xs leading-relaxed text-gray-600 dark:text-gray-400">{pickerMode === 'related' ? '掲載中の写真から複数選択できます。選択順で追加されます。' : pickerMode === 'main' ? '非掲載の画像も複数選択できます。代表写真の後ろに選択順で追加されます。' : '写真をクリックして設定します。'}</p>
+  <Input class="search mb-4" aria-label="選択する写真を検索" placeholder="ファイル名で検索…" bind:value={pickerSearch} oninput={()=>pickerPage=0}/>
+  <div class="picker-grid grid grid-cols-3 gap-3 sm:grid-cols-6 [&_button]:relative [&_button]:block [&_button]:min-w-0 [&_button]:overflow-hidden [&_button]:p-1 [&_button[aria-pressed=true]]:border-primary-500 [&_button[aria-pressed=true]]:ring-2 [&_button[aria-pressed=true]]:ring-primary-500 [&_img]:block [&_img]:aspect-[4/5] [&_img]:w-full [&_img]:rounded [&_img]:object-cover">
+    {#each pickerPhotos.slice(pickerPage*36,pickerPage*36+36) as photo (photo.id)}
+      <Button color="alternative" size="sm" disabled={pickerMode === 'main' && photo.id === outfit?.photo} aria-pressed={pickerMultiple ? pickerSelection.includes(photo.id) : undefined} onclick={()=>choose(photo)}>
+        <img src={thumb(photo)} alt={photo.originalName || photo.id} loading="lazy"/>
+        {#if pickerMode === 'main' && photo.id === outfit?.photo}
+          <span class="absolute top-2 left-2 rounded bg-gray-900/80 px-2 py-1 text-xs text-white">代表写真</span>
+        {:else if pickerMultiple && pickerSelection.includes(photo.id)}
+          <span class="selected-mark absolute top-2 left-2 rounded-full bg-primary-700 px-2 py-1 text-xs text-white">✓ {pickerSelection.indexOf(photo.id) + (pickerMode === 'main' ? 2 : 1)}</span>
+        {/if}
+      </Button>
+    {/each}
+  </div>
+  <div class="pager mt-5 flex items-center justify-center gap-4 text-xs text-gray-600 dark:text-gray-400"><Button color="alternative" size="sm" disabled={pickerPage===0} onclick={()=>pickerPage--}>前へ</Button><span>{pickerPage+1} / {Math.max(1,Math.ceil(pickerPhotos.length/36))}</span><Button color="alternative" size="sm" disabled={(pickerPage+1)*36>=pickerPhotos.length} onclick={()=>pickerPage++}>次へ</Button></div>
+</Modal>

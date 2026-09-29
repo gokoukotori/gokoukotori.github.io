@@ -78,8 +78,13 @@ export function validateContent(content, originalPhotos) {
       if ('credits' in theme) credits(theme.credits);
       items(theme.outfits, 'バリエーション');
       for (const outfit of theme.outfits) {
-        keys(outfit, ['id','name','photo','description','credits','threeView','galleryPhotoIds'], 'バリエーション');
+        keys(outfit, ['id','name','photo','description','credits','threeView','galleryPhotoIds','additionalPhotoIds'], 'バリエーション');
         credits(outfit.credits);
+        if ('additionalPhotoIds' in outfit) {
+          list(outfit.additionalPhotoIds, '追加メイン画像');
+          check(new Set(outfit.additionalPhotoIds).size === outfit.additionalPhotoIds.length, '追加メイン画像が重複しています。');
+          for (const id of outfit.additionalPhotoIds) check(ids.has(id), `追加メイン画像が見つかりません: ${id}`);
+        }
         const views = threeViews(outfit.threeView);
         list(views, '三面図');
         for (const view of views) {
@@ -107,6 +112,7 @@ export function photoUses(content, id) {
       for (const outfit of theme.outfits) {
         const label = `${avatar.name} / ${theme.name} / ${outfit.name}`;
         if (outfit.photo === id) uses.push(`${label}の代表写真`);
+        if (outfit.additionalPhotoIds?.includes(id)) uses.push(`${label}の追加メイン画像`);
         if (outfit.galleryPhotoIds?.includes(id)) uses.push(`${label}の関連フォト`);
         if (threeViews(outfit.threeView).some(view => [displayKey, normalizeGalleryImageKey(displayKey)].some(key => view.src?.endsWith(`/${key}`)))) uses.push(`${label}の三面図`);
       }
