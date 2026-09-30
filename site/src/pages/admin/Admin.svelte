@@ -159,7 +159,7 @@
 
 <div class="cms-shell grid min-h-screen grid-cols-1 bg-gray-50 text-sm text-gray-900 dark:bg-gray-900 dark:text-gray-50 min-[801px]:grid-cols-[190px_minmax(0,1fr)] xl:grid-cols-[230px_minmax(0,1fr)]">
   <aside class="sidebar flex flex-col border-b border-gray-200 bg-white p-5 dark:border-gray-700 dark:bg-gray-800 min-[801px]:sticky min-[801px]:top-0 min-[801px]:h-screen min-[801px]:border-r min-[801px]:p-4 xl:px-5 xl:py-9">
-    <a class="brand text-lg font-semibold tracking-wide min-[801px]:text-xl [&_span]:mt-2 [&_span]:hidden [&_span]:text-xs [&_span]:tracking-widest [&_span]:text-gray-500 min-[801px]:[&_span]:block" href="/cms/">ローカルCSM</a>
+    <a class="brand text-lg font-semibold tracking-wide min-[801px]:text-xl [&_span]:mt-2 [&_span]:hidden [&_span]:text-xs [&_span]:tracking-widest [&_span]:text-gray-500 min-[801px]:[&_span]:block" href="/cms/">ローカルCMS</a>
     <div class="local-badge my-7 hidden items-center gap-2 text-xs min-[801px]:flex text-gray-600 dark:text-gray-400 [&_i]:size-1.5 [&_i]:rounded-full [&_i]:bg-primary-500"><i></i> このPCだけで編集</div>
     <nav aria-label="管理メニュー" class="mt-4 flex flex-wrap gap-2 min-[801px]:mt-0 min-[801px]:grid">
       {#each [['avatars','01','アバター'],['media','02','ギャラリー画像'],['publish','03','プレビュー・公開']] as [key,num,label]}
@@ -256,7 +256,21 @@
                 </section>
               {/if}
               {#if kind === 'theme' || kind === 'outfit'}
-                <section class="form-section mt-7 border-t pt-6 border-gray-200 dark:border-gray-700"><div class="section-top mb-5 flex flex-wrap items-center justify-between gap-3 [&_.eyebrow]:mb-0"><h2 class="text-lg font-semibold [&_small]:ml-2 [&_small]:text-xs [&_small]:font-normal [&_small]:text-gray-500">使用商品</h2><Button color="alternative" size="sm" onclick={() => {selected.credits = [...(selected.credits || []), {category:'衣装',name:'新しい商品',url:''}];doc={...doc};changed();}}>＋ 追加</Button></div>{#each selected.credits || [] as credit,index}<div class="credit-row grid grid-cols-2 items-center gap-2 xl:grid-cols-[100px_1fr_1.5fr_auto] max-[420px]:grid-cols-1"><Label class="mb-4 grid gap-2 text-sm">分類<Input bind:value={credit.category} oninput={changed}/></Label><Label class="mb-4 grid gap-2 text-sm">商品名<Input bind:value={credit.name} oninput={changed}/></Label><Label class="mb-4 grid gap-2 text-sm">商品URL<Input bind:value={credit.url} oninput={changed}/></Label><Button color="alternative" size="sm" aria-label={`使用商品 ${index+1}を削除`} onclick={()=>{selected.credits.splice(index,1);doc={...doc};changed();}}>×</Button></div>{/each}</section>
+                <section class="form-section mt-7 border-t pt-6 border-gray-200 dark:border-gray-700">
+                  <div class="section-top mb-5 flex flex-wrap items-center justify-between gap-3 [&_.eyebrow]:mb-0"><h2 class="text-lg font-semibold [&_small]:ml-2 [&_small]:text-xs [&_small]:font-normal [&_small]:text-gray-500">使用商品</h2><Button color="alternative" size="sm" onclick={() => {selected.credits = [...(selected.credits || []), {category:'衣装',name:'新しい商品',url:''}];doc={...doc};changed();}}>＋ 追加</Button></div>
+                  {#each selected.credits || [] as credit,index (credit)}
+                    <div class="credit-row grid grid-cols-2 items-center gap-2 xl:grid-cols-[100px_minmax(0,1fr)_minmax(0,1.5fr)_auto] max-[420px]:grid-cols-1">
+                      <Label class="mb-4 grid gap-2 text-sm">分類<Input bind:value={credit.category} oninput={changed}/></Label>
+                      <Label class="mb-4 grid gap-2 text-sm">商品名<Input bind:value={credit.name} oninput={changed}/></Label>
+                      <Label class="mb-4 grid gap-2 text-sm">商品URL<Input bind:value={credit.url} oninput={changed}/></Label>
+                      <div class="mb-4 flex flex-wrap justify-end gap-1 self-end">
+                        <Button color="alternative" size="sm" aria-label={`使用商品 ${index+1}を上へ`} disabled={index === 0} onclick={() => reorder(selected.credits,index,index-1)}>↑</Button>
+                        <Button color="alternative" size="sm" aria-label={`使用商品 ${index+1}を下へ`} disabled={index === selected.credits.length-1} onclick={() => reorder(selected.credits,index,index+1)}>↓</Button>
+                        <Button color="alternative" size="sm" aria-label={`使用商品 ${index+1}を削除`} onclick={()=>{selected.credits.splice(index,1);doc={...doc};changed();}}>×</Button>
+                      </div>
+                    </div>
+                  {/each}
+                </section>
               {/if}
             {:else}<div class="empty px-6 py-18 text-center text-gray-600 dark:text-gray-400">素体を追加して、紹介を作りましょう。</div>{/if}
           </section>
