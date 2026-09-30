@@ -204,7 +204,7 @@
           "id": "theme-62ff91da",
           "name": "なりきりシフォン_真冬",
           "photo": "cms-06d5afcd2ab04462ca1f7adafd7e5a11",
-          "description": "",
+          "description": "このシリーズ初めて建造したアバターだったりする",
           "label": "",
           "credits": [
             {
@@ -236,7 +236,7 @@
               "id": "outfit-7926bc5f",
               "name": "真冬服",
               "photo": "cms-06d5afcd2ab04462ca1f7adafd7e5a11",
-              "description": "",
+              "description": "こっそり三回ぐらい服装のフィット感をリニューアルしてたり、、、",
               "credits": [],
               "additionalPhotoIds": [
                 "cms-a690e8d2c60de167b2f910dc877c4c86"
@@ -380,7 +380,7 @@
           "id": "theme-c7b0f950",
           "name": "なりきりシフォン_ぷらむ",
           "photo": "cms-a816f2d01556dc2f1605cf5756636586",
-          "description": "",
+          "description": "個人的にお気に入り",
           "label": "",
           "credits": [
             {
@@ -981,10 +981,94 @@
           ]
         },
         {
+          "id": "theme-c24f5652-e462-4af8-acc3-a012bdea5409",
+          "name": "そらは髪",
+          "photo": "cms-5a31863062aadf5415cb3582532b3016",
+          "description": "実はソラハを真似ているわけではなく、髪型が可愛いから使いたかっただけ、、、なのでなりきりシリーズではない",
+          "label": "",
+          "credits": [
+            {
+              "category": "衣装",
+              "name": "ソラハ",
+              "url": "https://booth.pm/ja/items/4208278"
+            }
+          ],
+          "outfits": [
+            {
+              "id": "outfit-f1686c5d-3003-4f4d-8fad-5225a3419775",
+              "name": "デフォルト服",
+              "photo": "cms-926cf8b8688e65d769baa9ab38c71c6b",
+              "description": "",
+              "credits": [],
+              "additionalPhotoIds": [],
+              "threeView": [
+                {
+                  "src": "https://media.gokoukotori.com/media/display/41.%E3%82%B7%E3%83%95%E3%82%A9%E3%83%B3_%E3%81%9D%E3%82%89%E3%81%A3%E3%81%AF_%E3%83%87%E3%83%95%E3%82%A9%E3%83%AB%E3%83%88_three-view.webp"
+                }
+              ]
+            },
+            {
+              "id": "outfit-9e6dab1b-e563-4633-b4e9-b02802859259",
+              "name": "Re:うさぎさんるーむうぇあ",
+              "photo": "cms-a9567603a2b6baab9d42f31b797ab270",
+              "description": "",
+              "credits": [
+                {
+                  "category": "衣装",
+                  "name": "Re:うさぎさんるーむうぇあ",
+                  "url": "https://booth.pm/ja/items/5657072"
+                }
+              ],
+              "additionalPhotoIds": [],
+              "threeView": [
+                {
+                  "src": "https://media.gokoukotori.com/media/display/41.%E3%82%B7%E3%83%95%E3%82%A9%E3%83%B3_%E3%81%9D%E3%82%89%E3%81%A3%E3%81%AF_%E3%81%86%E3%81%95%E3%81%8E%E3%81%95%E3%82%93%E3%82%8B%E3%83%BC%E3%82%80%E3%81%86%E3%81%87%E3%81%82_three-view.webp"
+                }
+              ]
+            },
+            {
+              "id": "outfit-485306b7",
+              "name": "White Lily Archive",
+              "photo": "cms-5a31863062aadf5415cb3582532b3016",
+              "description": "",
+              "credits": [
+                {
+                  "category": "衣装",
+                  "name": "White Lily Archive",
+                  "url": "https://booth.pm/ja/items/5773333"
+                }
+              ],
+              "threeView": [
+                {
+                  "src": "https://media.gokoukotori.com/media/display/41.%E3%82%B7%E3%83%95%E3%82%A9%E3%83%B3_%E3%81%9D%E3%82%89%E3%81%A3%E3%81%AF_White%20Lily%20Archive_three-view.webp"
+                }
+              ]
+            },
+            {
+              "id": "outfit-01f8c7e3",
+              "name": "セーラーミズ",
+              "photo": "cms-6898b14b4cecbee25f030798c79a57e0",
+              "description": "",
+              "credits": [
+                {
+                  "category": "衣装",
+                  "name": "セーラーミズ",
+                  "url": "https://booth.pm/ja/items/5415238"
+                }
+              ],
+              "threeView": [
+                {
+                  "src": "https://media.gokoukotori.com/media/display/41.%E3%82%B7%E3%83%95%E3%82%A9%E3%83%B3_%E3%81%9D%E3%82%89%E3%81%A3%E3%81%AF_%E3%82%BB%E3%83%BC%E3%83%A9%E3%83%BC%E3%83%9F%E3%82%BA_three-view.webp"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "id": "theme-b4d5eb58",
           "name": "髪型を使いたかったけれど髪型のせいでだれかさんに見えてどうしようもない残骸",
           "photo": "cms-0bbc8ec366f8e6fe8494a3ff06ac40fe",
-          "description": "",
+          "description": "髪型使いたいがために建造、したけどもどうしてもとあるフレンド達に見えてしょうがない、、、",
           "label": "",
           "credits": [
             {
@@ -1074,7 +1158,7 @@
           "id": "theme-7bebc5fc-16d6-4bf0-9ea6-027036f79154",
           "name": "髪型を変えて姉妹のような感じで",
           "photo": "cms-13f565b4f5419d404ca0955e9450d2be",
-          "description": "",
+          "description": "残骸と姉妹のような感じで、、、色は色相144度ずらした色。実は5周すると元に色に戻る",
           "label": "",
           "credits": [
             {
@@ -1159,7 +1243,7 @@
           "id": "theme-119f197f-5bfb-4b84-abab-a6086943010a",
           "name": "髪型を変えて3姉妹のような感じで",
           "photo": "cms-2abf2ceebaf363fc255dac05fd6d841d",
-          "description": "",
+          "description": "残骸と3姉妹のような感じで、、、色は色相288度ずらした色。",
           "label": "",
           "credits": [
             {
@@ -1244,7 +1328,7 @@
           "id": "theme-df4a9b65-bb5f-4fad-a4f4-19314945cc4e",
           "name": "無題_1",
           "photo": "cms-da13b8f4bf12476d78497d548909aa16",
-          "description": "",
+          "description": "気の迷いで建造したアバター、なので無題",
           "label": "",
           "credits": [
             {
@@ -1276,6 +1360,16 @@
               "category": "衣装",
               "name": "AHE",
               "url": "https://booth.pm/ja/items/6334628"
+            },
+            {
+              "category": "ネイル",
+              "name": "Fluer de Classique",
+              "url": "https://booth.pm/ja/items/6818380"
+            },
+            {
+              "category": "アクセサリ",
+              "name": "花水槽の飾りモノ -Herbarium Acc-",
+              "url": "https://booth.pm/ja/items/6470802"
             }
           ],
           "outfits": [
@@ -1303,7 +1397,7 @@
           "id": "theme-7b8de620-5776-41dd-8e9c-73fb6f4143a7",
           "name": "無題_2",
           "photo": "cms-ab523d8d3eee61158fa31264a4ee0721",
-          "description": "",
+          "description": "気の迷いで建造したアバター第二弾",
           "label": "",
           "credits": [
             {
@@ -1347,7 +1441,7 @@
           "id": "theme-a263a091-2d47-4c36-b7b2-68b664a1f677",
           "name": "無題_3",
           "photo": "cms-3551c24760f95e45205f8ffd6163fbf3",
-          "description": "",
+          "description": "気の迷いで建造したアバター第三弾",
           "label": "",
           "credits": [
             {
@@ -1413,6 +1507,11 @@
               "category": "メイクテクスチャ",
               "name": "【Chiffon ♡ シフォン】Chiffon Cute make up 3set & body texture ♡ シフォン メイク テクスチャ",
               "url": "https://booth.pm/ja/items/5434138"
+            },
+            {
+              "category": "ネイル",
+              "name": "HolidayNail",
+              "url": "https://booth.pm/ja/items/4417173"
             }
           ],
           "outfits": [
@@ -1470,7 +1569,7 @@
           "id": "theme-c8fff3f1-2377-4e8a-9073-8e413b2e526a",
           "name": "ディープレッド",
           "photo": "cms-05b0b30c3005ae05c9c02f7d956087dc",
-          "description": "",
+          "description": "実は出さないだけでお気に入り",
           "label": "",
           "credits": [
             {
@@ -1716,6 +1815,340 @@
               "threeView": [
                 {
                   "src": "https://media.gokoukotori.com/media/display/56.%E3%82%B7%E3%83%95%E3%82%A9%E3%83%B3_%E7%AB%9C%E8%83%86%E8%89%B2_GLEIPNIR_three-view.webp"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "theme-2b99232d-f5c0-4bb0-bee1-37b4d7057f55",
+          "name": "きんぱつあかめ",
+          "photo": "cms-93b5f12193d01c6ac39a92a66bb4ab4d",
+          "description": "",
+          "label": "",
+          "credits": [
+            {
+              "category": "髪型",
+              "name": "Flow Braid Hair",
+              "url": "https://booth.pm/ja/items/6624847"
+            },
+            {
+              "category": "ボディテクスチャ",
+              "name": "【シフォン(Chiffon)専用 】Cherry Blossom Rain Eye+Makeup+Body texture+Material[HD-PSD]",
+              "url": "https://booth.pm/ja/items/5413521"
+            },
+            {
+              "category": "アイテクスチャ",
+              "name": "sparkle ~ Eye texture ~",
+              "url": "https://booth.pm/ja/items/5596597"
+            }
+          ],
+          "outfits": [
+            {
+              "id": "outfit-875d4632-878b-4542-935f-b3a1c254738c",
+              "name": "デフォルト服",
+              "photo": "cms-6257f28b5b8ef44653bdb5579f3927f3",
+              "description": "",
+              "credits": [],
+              "threeView": [
+                {
+                  "src": "https://media.gokoukotori.com/media/display/44.%E3%82%B7%E3%83%95%E3%82%A9%E3%83%B3_%E3%81%8D%E3%82%93%E3%81%B1%E3%81%A4%E3%81%82%E3%81%8B%E3%82%81_%E3%83%87%E3%83%95%E3%82%A9%E3%83%AB%E3%83%88_three-view.webp"
+                }
+              ]
+            },
+            {
+              "id": "outfit-0400c13f-dfb2-4cb1-ba9b-3fb043a498de",
+              "name": "Re:うさぎさんるーむうぇあ",
+              "photo": "cms-c1ca4b80bfbd096eb471f5654a552749",
+              "description": "",
+              "credits": [
+                {
+                  "category": "衣装",
+                  "name": "Re:うさぎさんるーむうぇあ",
+                  "url": "https://booth.pm/ja/items/5657072"
+                }
+              ],
+              "threeView": [
+                {
+                  "src": "https://media.gokoukotori.com/media/display/44.%E3%82%B7%E3%83%95%E3%82%A9%E3%83%B3_%E3%81%8D%E3%82%93%E3%81%B1%E3%81%A4%E3%81%82%E3%81%8B%E3%82%81_%E3%81%86%E3%81%95%E3%81%8E%E3%81%95%E3%82%93%E3%82%8B%E3%83%BC%E3%82%80%E3%81%86%E3%81%87%E3%81%82_three-view.webp"
+                }
+              ]
+            },
+            {
+              "id": "outfit-44637045-dff7-45ef-9de1-a58ea5183863",
+              "name": "Blanchir",
+              "photo": "cms-93b5f12193d01c6ac39a92a66bb4ab4d",
+              "description": "",
+              "credits": [
+                {
+                  "category": "衣装",
+                  "name": "Blanchir",
+                  "url": "https://booth.pm/ja/items/3964240"
+                }
+              ],
+              "threeView": [
+                {
+                  "src": "https://media.gokoukotori.com/media/display/44.%E3%82%B7%E3%83%95%E3%82%A9%E3%83%B3_%E3%81%8D%E3%82%93%E3%81%B1%E3%81%A4%E3%81%82%E3%81%8B%E3%82%81_Blanchir_three-view.webp"
+                }
+              ]
+            },
+            {
+              "id": "outfit-e037a3a1",
+              "name": "Summer Holiday",
+              "photo": "cms-c15c7407c7e99dbfa2082617dc7eda45",
+              "description": "",
+              "credits": [
+                {
+                  "category": "衣装",
+                  "name": "Summer Holiday",
+                  "url": "https://booth.pm/ja/items/5865905"
+                }
+              ],
+              "threeView": [
+                {
+                  "src": "https://media.gokoukotori.com/media/display/44.%E3%82%B7%E3%83%95%E3%82%A9%E3%83%B3_%E3%81%8D%E3%82%93%E3%81%B1%E3%81%A4%E3%81%82%E3%81%8B%E3%82%81_Summer%20Holiday_three-view.webp"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "theme-189a6af5-da8a-4292-963b-d79c300792cf",
+          "name": "なぞぴんく",
+          "photo": "cms-c89ae6a3747b3749c21cdd201e78bcdb",
+          "description": "",
+          "label": "",
+          "credits": [
+            {
+              "category": "髪型",
+              "name": "1st PINK♡PUDDING",
+              "url": "https://booth.pm/ja/items/5859045"
+            },
+            {
+              "category": "ボディテクスチャ",
+              "name": "【シフォン(Chiffon)専用 】Cherry Blossom Rain Eye+Makeup+Body texture+Material[HD-PSD]",
+              "url": "https://booth.pm/ja/items/5413521"
+            },
+            {
+              "category": "アイテクスチャ",
+              "name": "【あまとうさぎ4アバター専用】Ciel アイテクスチャ【全9色】",
+              "url": "https://booth.pm/ja/items/6123293"
+            },
+            {
+              "category": "アクセサリ",
+              "name": "Yumekawa Star Halo",
+              "url": "https://booth.pm/ja/items/5440150"
+            },
+            {
+              "category": "アクセサリ",
+              "name": "氷の空【イヤリング】",
+              "url": "https://booth.pm/ja/items/6378846"
+            },
+            {
+              "category": "ネイル",
+              "name": "【Nail&Ring】MERODROPS-もっと、近くへ-",
+              "url": "https://booth.pm/ja/items/5652457"
+            },
+            {
+              "category": "アクセサリ",
+              "name": "‧₊⁺ C Hairpin ‧₊⁺",
+              "url": "https://booth.pm/ja/items/5638091"
+            }
+          ],
+          "outfits": [
+            {
+              "id": "outfit-4f8d3120-f117-48b0-9cdc-3abb164c1b43",
+              "name": "デフォルト服",
+              "photo": "cms-a15b8a690e2269e7a69e751497241386",
+              "description": "",
+              "credits": [],
+              "threeView": [
+                {
+                  "src": "https://media.gokoukotori.com/media/display/29.%E3%82%B7%E3%83%95%E3%82%A9%E3%83%B3_%E3%81%AA%E3%81%9E%E3%81%B4%E3%82%93%E3%81%8F_%E3%83%87%E3%83%95%E3%82%A9%E3%83%AB%E3%83%88_three-view.webp"
+                }
+              ]
+            },
+            {
+              "id": "outfit-874d0260-f2e7-4279-a41f-53aade959026",
+              "name": "Re:うさぎさんるーむうぇあ",
+              "photo": "cms-3a1c5bbefaa91e7f0a213a0ce3f3b947",
+              "description": "",
+              "credits": [
+                {
+                  "category": "衣装",
+                  "name": "Re:うさぎさんるーむうぇあ",
+                  "url": "https://booth.pm/ja/items/5657072"
+                }
+              ],
+              "threeView": [
+                {
+                  "src": "https://media.gokoukotori.com/media/display/29.%E3%82%B7%E3%83%95%E3%82%A9%E3%83%B3_%E3%81%AA%E3%81%9E%E3%81%B4%E3%82%93%E3%81%8F_%E3%81%86%E3%81%95%E3%81%8E%E3%81%95%E3%82%93%E3%82%8B%E3%83%BC%E3%82%80%E3%81%86%E3%81%87%E3%81%82_three-view.webp"
+                }
+              ]
+            },
+            {
+              "id": "outfit-851e8c78-724c-4af2-bdcd-56e7620f7a1a",
+              "name": "ましゅまろてんし",
+              "photo": "cms-ff518a2ab376bfc3c741dc13760575dd",
+              "description": "",
+              "credits": [
+                {
+                  "category": "衣装",
+                  "name": "ましゅまろてんし",
+                  "url": "https://booth.pm/ja/items/5824072"
+                }
+              ],
+              "threeView": [
+                {
+                  "src": "https://media.gokoukotori.com/media/display/29.%E3%82%B7%E3%83%95%E3%82%A9%E3%83%B3_%E3%81%AA%E3%81%9E%E3%81%B4%E3%82%93%E3%81%8F_%E3%81%BE%E3%81%97%E3%82%85%E3%81%BE%E3%82%8D%E3%81%A6%E3%82%93%E3%81%97_three-view.webp"
+                }
+              ]
+            },
+            {
+              "id": "outfit-ae71cc1f-b5b9-48de-a85f-0e7855fd7a75",
+              "name": "SailorTenshi せーらー天使",
+              "photo": "cms-c89ae6a3747b3749c21cdd201e78bcdb",
+              "description": "",
+              "credits": [
+                {
+                  "category": "衣装",
+                  "name": "SailorTenshi せーらー天使",
+                  "url": "https://booth.pm/ja/items/6061779"
+                }
+              ],
+              "threeView": [
+                {
+                  "src": "https://media.gokoukotori.com/media/display/29.%E3%82%B7%E3%83%95%E3%82%A9%E3%83%B3_%E3%81%AA%E3%81%9E%E3%81%B4%E3%82%93%E3%81%8F_%E3%81%9B%E3%83%BC%E3%82%89%E3%83%BC%E5%A4%A9%E4%BD%BF_three-view.webp"
+                }
+              ]
+            },
+            {
+              "id": "outfit-17487db6",
+              "name": "セーラージャージ",
+              "photo": "cms-c24a44517cc8cb24fb49d4ae7bbd0ddd",
+              "description": "",
+              "credits": [
+                {
+                  "category": "衣装",
+                  "name": "セーラージャージ",
+                  "url": "https://booth.pm/ja/items/4897448"
+                }
+              ],
+              "threeView": [
+                {
+                  "src": "https://media.gokoukotori.com/media/display/29.%E3%82%B7%E3%83%95%E3%82%A9%E3%83%B3_%E3%81%AA%E3%81%9E%E3%81%B4%E3%82%93%E3%81%8F_%E3%82%BB%E3%83%BC%E3%83%A9%E3%83%BC%E3%82%B8%E3%83%A3%E3%83%BC%E3%82%B8_three-view.webp"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "theme-7c4c526f-9b71-427c-8c84-3d12388cc97c",
+          "name": "オレンジブラウン",
+          "photo": "cms-07b1083bbf8b6bbf7fa5b758137e45bd",
+          "description": "",
+          "label": "",
+          "credits": [
+            {
+              "category": "髪型",
+              "name": "ラブリーローツインテールヘア",
+              "url": "https://booth.pm/ja/items/5208259"
+            },
+            {
+              "category": "メイクテクスチャ",
+              "name": "【Chiffon ♡ シフォン】Chiffon Cute make up 3set & body texture ♡ シフォン メイク テクスチャ",
+              "url": "https://booth.pm/ja/items/5434138"
+            },
+            {
+              "category": "ボディテクスチャ",
+              "name": "【シフォン(Chiffon)専用 】Cherry Blossom Rain Eye+Makeup+Body texture+Material[HD-PSD]",
+              "url": "https://booth.pm/ja/items/5413521"
+            },
+            {
+              "category": "アイテクスチャ",
+              "name": "【あまとうさぎ4アバター専用】Ciel アイテクスチャ【全9色】",
+              "url": "https://booth.pm/ja/items/6123293"
+            },
+            {
+              "category": "アクセサリ",
+              "name": "スクエア型眼鏡　HT-SQ　001",
+              "url": "https://booth.pm/ja/items/3725294"
+            },
+            {
+              "category": "アクセサリ",
+              "name": "氷の空【イヤリング】",
+              "url": "https://booth.pm/ja/items/6378846"
+            },
+            {
+              "category": "ネイル",
+              "name": "FrozenNail",
+              "url": "https://booth.pm/ja/items/3520104"
+            }
+          ],
+          "outfits": [
+            {
+              "id": "outfit-b1229306-28f3-41f4-92fa-af4a7896bd00",
+              "name": "デフォルト服",
+              "photo": "cms-d0cdcf6efea18c77ed00aadeb3e72da2",
+              "description": "",
+              "credits": [],
+              "threeView": [
+                {
+                  "src": "https://media.gokoukotori.com/media/display/31.%E3%82%B7%E3%83%95%E3%82%A9%E3%83%B3_%E3%82%AA%E3%83%AC%E3%83%B3%E3%82%B8%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3_%E3%83%87%E3%83%95%E3%82%A9%E3%83%AB%E3%83%88_three-view.webp"
+                }
+              ]
+            },
+            {
+              "id": "outfit-e47f811e-4964-4a9d-b416-20006dc737bb",
+              "name": "Re:うさぎさんるーむうぇあ",
+              "photo": "cms-e7e851a249ce109afcc63ba37f80fa55",
+              "description": "",
+              "credits": [
+                {
+                  "category": "衣装",
+                  "name": "Re:うさぎさんるーむうぇあ",
+                  "url": "https://booth.pm/ja/items/5657072"
+                }
+              ],
+              "threeView": [
+                {
+                  "src": "https://media.gokoukotori.com/media/display/31.%E3%82%B7%E3%83%95%E3%82%A9%E3%83%B3_%E3%82%AA%E3%83%AC%E3%83%B3%E3%82%B8%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3_%E3%81%86%E3%81%95%E3%81%8E%E3%81%95%E3%82%93%E3%82%8B%E3%83%BC%E3%82%80%E3%81%86%E3%81%87%E3%81%82_three-view.webp"
+                }
+              ]
+            },
+            {
+              "id": "outfit-fdd5f572-70c3-4edf-a0f6-9cdb784dfbed",
+              "name": "𝙁𝙪𝙣𝙠𝙮 𝙎𝙩𝙧𝙚𝙚𝙩 𝙑𝙞𝙫𝙚",
+              "photo": "cms-07b1083bbf8b6bbf7fa5b758137e45bd",
+              "description": "",
+              "credits": [
+                {
+                  "category": "衣装",
+                  "name": "𝙁𝙪𝙣𝙠𝙮 𝙎𝙩𝙧𝙚𝙚𝙩 𝙑𝙞𝙫𝙚",
+                  "url": "https://booth.pm/ja/items/6521723"
+                }
+              ],
+              "threeView": [
+                {
+                  "src": "https://media.gokoukotori.com/media/display/31.%E3%82%B7%E3%83%95%E3%82%A9%E3%83%B3_%E3%82%AA%E3%83%AC%E3%83%B3%E3%82%B8%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3_%F0%9D%99%81%F0%9D%99%AA%F0%9D%99%A3%F0%9D%99%A0%F0%9D%99%AE%20%F0%9D%99%8E%F0%9D%99%A9%F0%9D%99%A7%F0%9D%99%9A%F0%9D%99%9A%F0%9D%99%A9%20%F0%9D%99%91%F0%9D%99%9E%F0%9D%99%AB%F0%9D%99%9A_three-view.webp"
+                }
+              ]
+            },
+            {
+              "id": "outfit-d701b408-5db5-4491-bf05-fe2f701300bd",
+              "name": "「花」HANA",
+              "photo": "cms-3c560d1546316b25ff3d024a3321655e",
+              "description": "",
+              "credits": [
+                {
+                  "category": "衣装",
+                  "name": "「花」HANA",
+                  "url": "https://booth.pm/ja/items/6699089"
+                }
+              ],
+              "threeView": [
+                {
+                  "src": "https://media.gokoukotori.com/media/display/31.%E3%82%B7%E3%83%95%E3%82%A9%E3%83%B3_%E3%82%AA%E3%83%AC%E3%83%B3%E3%82%B8%E3%83%96%E3%83%A9%E3%82%A6%E3%83%B3_%E3%80%8C%E8%8A%B1%E3%80%8DHANA_three-view.webp"
                 }
               ]
             }
@@ -6237,6 +6670,346 @@
       "height": 2048,
       "uploaded": true,
       "originalName": "56.シフォン_竜胆色_うさぎさんるーむうぇあ_face.png"
+    },
+    {
+      "id": "cms-93b5f12193d01c6ac39a92a66bb4ab4d",
+      "capturedAt": "2026-09-30T02:34:08.918Z",
+      "displayKey": "display/44.シフォン_きんぱつあかめ_Blanchir_face.webp",
+      "thumbnailKey": "thumbnails/44.シフォン_きんぱつあかめ_Blanchir_face.webp",
+      "width": 2048,
+      "height": 2048,
+      "uploaded": true,
+      "originalName": "44.シフォン_きんぱつあかめ_Blanchir_face.png"
+    },
+    {
+      "id": "cms-8668548d6a6b71808ee08fc4ee757220",
+      "capturedAt": "2026-09-30T02:34:09.647Z",
+      "displayKey": "display/44.シフォン_きんぱつあかめ_Blanchir_three-view.webp",
+      "thumbnailKey": "thumbnails/44.シフォン_きんぱつあかめ_Blanchir_three-view.webp",
+      "width": 3840,
+      "height": 1280,
+      "uploaded": true,
+      "originalName": "44.シフォン_きんぱつあかめ_Blanchir_three-view.png"
+    },
+    {
+      "id": "cms-c15c7407c7e99dbfa2082617dc7eda45",
+      "capturedAt": "2026-09-30T02:34:13.630Z",
+      "displayKey": "display/44.シフォン_きんぱつあかめ_Summer Holiday_face.webp",
+      "thumbnailKey": "thumbnails/44.シフォン_きんぱつあかめ_Summer Holiday_face.webp",
+      "width": 2048,
+      "height": 2048,
+      "uploaded": true,
+      "originalName": "44.シフォン_きんぱつあかめ_Summer Holiday_face.png"
+    },
+    {
+      "id": "cms-79c62c969d82cfc71883b62b2bdf099b",
+      "capturedAt": "2026-09-30T02:34:14.465Z",
+      "displayKey": "display/44.シフォン_きんぱつあかめ_Summer Holiday_three-view.webp",
+      "thumbnailKey": "thumbnails/44.シフォン_きんぱつあかめ_Summer Holiday_three-view.webp",
+      "width": 3840,
+      "height": 1280,
+      "uploaded": true,
+      "originalName": "44.シフォン_きんぱつあかめ_Summer Holiday_three-view.png"
+    },
+    {
+      "id": "cms-c1ca4b80bfbd096eb471f5654a552749",
+      "capturedAt": "2026-09-30T02:34:03.773Z",
+      "displayKey": "display/44.シフォン_きんぱつあかめ_うさぎさんるーむうぇあ_face.webp",
+      "thumbnailKey": "thumbnails/44.シフォン_きんぱつあかめ_うさぎさんるーむうぇあ_face.webp",
+      "width": 2048,
+      "height": 2048,
+      "uploaded": true,
+      "originalName": "44.シフォン_きんぱつあかめ_うさぎさんるーむうぇあ_face.png"
+    },
+    {
+      "id": "cms-ab5aa4db988855544f7e36ec2b2c652a",
+      "capturedAt": "2026-09-30T02:34:04.778Z",
+      "displayKey": "display/44.シフォン_きんぱつあかめ_うさぎさんるーむうぇあ_three-view.webp",
+      "thumbnailKey": "thumbnails/44.シフォン_きんぱつあかめ_うさぎさんるーむうぇあ_three-view.webp",
+      "width": 3840,
+      "height": 1280,
+      "uploaded": true,
+      "originalName": "44.シフォン_きんぱつあかめ_うさぎさんるーむうぇあ_three-view.png"
+    },
+    {
+      "id": "cms-6257f28b5b8ef44653bdb5579f3927f3",
+      "capturedAt": "2026-09-30T02:33:56.297Z",
+      "displayKey": "display/44.シフォン_きんぱつあかめ_デフォルト_face.webp",
+      "thumbnailKey": "thumbnails/44.シフォン_きんぱつあかめ_デフォルト_face.webp",
+      "width": 2048,
+      "height": 2048,
+      "uploaded": true,
+      "originalName": "44.シフォン_きんぱつあかめ_デフォルト_face.png"
+    },
+    {
+      "id": "cms-7a1b88cc66f426c0271d3ad609b333b7",
+      "capturedAt": "2026-09-30T02:33:57.146Z",
+      "displayKey": "display/44.シフォン_きんぱつあかめ_デフォルト_three-view.webp",
+      "thumbnailKey": "thumbnails/44.シフォン_きんぱつあかめ_デフォルト_three-view.webp",
+      "width": 3840,
+      "height": 1280,
+      "uploaded": true,
+      "originalName": "44.シフォン_きんぱつあかめ_デフォルト_three-view.png"
+    },
+    {
+      "id": "cms-3a1c5bbefaa91e7f0a213a0ce3f3b947",
+      "capturedAt": "2026-09-30T03:00:23.906Z",
+      "displayKey": "display/29.シフォン_なぞぴんく_うさぎさんるーむうぇあ_face.webp",
+      "thumbnailKey": "thumbnails/29.シフォン_なぞぴんく_うさぎさんるーむうぇあ_face.webp",
+      "width": 2048,
+      "height": 2048,
+      "uploaded": true,
+      "originalName": "29.シフォン_なぞぴんく_うさぎさんるーむうぇあ_face.png"
+    },
+    {
+      "id": "cms-87e7ef93a3577f9c0ad65ad362067680",
+      "capturedAt": "2026-09-30T03:00:24.767Z",
+      "displayKey": "display/29.シフォン_なぞぴんく_うさぎさんるーむうぇあ_three-view.webp",
+      "thumbnailKey": "thumbnails/29.シフォン_なぞぴんく_うさぎさんるーむうぇあ_three-view.webp",
+      "width": 3840,
+      "height": 1280,
+      "uploaded": true,
+      "originalName": "29.シフォン_なぞぴんく_うさぎさんるーむうぇあ_three-view.png"
+    },
+    {
+      "id": "cms-c24a44517cc8cb24fb49d4ae7bbd0ddd",
+      "capturedAt": "2026-09-30T03:00:44.969Z",
+      "displayKey": "display/29.シフォン_なぞぴんく_セーラージャージ_face.webp",
+      "thumbnailKey": "thumbnails/29.シフォン_なぞぴんく_セーラージャージ_face.webp",
+      "width": 2048,
+      "height": 2048,
+      "uploaded": true,
+      "originalName": "29.シフォン_なぞぴんく_セーラージャージ_face.png"
+    },
+    {
+      "id": "cms-2f9eb5215c6fd755864d08dc0af009cc",
+      "capturedAt": "2026-09-30T03:00:45.848Z",
+      "displayKey": "display/29.シフォン_なぞぴんく_セーラージャージ_three-view.webp",
+      "thumbnailKey": "thumbnails/29.シフォン_なぞぴんく_セーラージャージ_three-view.webp",
+      "width": 3840,
+      "height": 1280,
+      "uploaded": true,
+      "originalName": "29.シフォン_なぞぴんく_セーラージャージ_three-view.png"
+    },
+    {
+      "id": "cms-c89ae6a3747b3749c21cdd201e78bcdb",
+      "capturedAt": "2026-09-30T03:00:37.148Z",
+      "displayKey": "display/29.シフォン_なぞぴんく_せーらー天使_face.webp",
+      "thumbnailKey": "thumbnails/29.シフォン_なぞぴんく_せーらー天使_face.webp",
+      "width": 2048,
+      "height": 2048,
+      "uploaded": true,
+      "originalName": "29.シフォン_なぞぴんく_せーらー天使_face.png"
+    },
+    {
+      "id": "cms-6acbe734757a6d9d9b20b8bf14aa457c",
+      "capturedAt": "2026-09-30T03:00:37.967Z",
+      "displayKey": "display/29.シフォン_なぞぴんく_せーらー天使_three-view.webp",
+      "thumbnailKey": "thumbnails/29.シフォン_なぞぴんく_せーらー天使_three-view.webp",
+      "width": 3840,
+      "height": 1280,
+      "uploaded": true,
+      "originalName": "29.シフォン_なぞぴんく_せーらー天使_three-view.png"
+    },
+    {
+      "id": "cms-a15b8a690e2269e7a69e751497241386",
+      "capturedAt": "2026-09-30T03:00:13.885Z",
+      "displayKey": "display/29.シフォン_なぞぴんく_デフォルト_face.webp",
+      "thumbnailKey": "thumbnails/29.シフォン_なぞぴんく_デフォルト_face.webp",
+      "width": 2048,
+      "height": 2048,
+      "uploaded": true,
+      "originalName": "29.シフォン_なぞぴんく_デフォルト_face.png"
+    },
+    {
+      "id": "cms-f0c85ca0e9ba0cebba26a175abd5349b",
+      "capturedAt": "2026-09-30T03:00:14.747Z",
+      "displayKey": "display/29.シフォン_なぞぴんく_デフォルト_three-view.webp",
+      "thumbnailKey": "thumbnails/29.シフォン_なぞぴんく_デフォルト_three-view.webp",
+      "width": 3840,
+      "height": 1280,
+      "uploaded": true,
+      "originalName": "29.シフォン_なぞぴんく_デフォルト_three-view.png"
+    },
+    {
+      "id": "cms-ff518a2ab376bfc3c741dc13760575dd",
+      "capturedAt": "2026-09-30T03:00:32.349Z",
+      "displayKey": "display/29.シフォン_なぞぴんく_ましゅまろてんし_face.webp",
+      "thumbnailKey": "thumbnails/29.シフォン_なぞぴんく_ましゅまろてんし_face.webp",
+      "width": 2048,
+      "height": 2048,
+      "uploaded": true,
+      "originalName": "29.シフォン_なぞぴんく_ましゅまろてんし_face.png"
+    },
+    {
+      "id": "cms-65184a0bcccda3f4f63be3260fa6d31d",
+      "capturedAt": "2026-09-30T03:00:33.209Z",
+      "displayKey": "display/29.シフォン_なぞぴんく_ましゅまろてんし_three-view.webp",
+      "thumbnailKey": "thumbnails/29.シフォン_なぞぴんく_ましゅまろてんし_three-view.webp",
+      "width": 3840,
+      "height": 1280,
+      "uploaded": true,
+      "originalName": "29.シフォン_なぞぴんく_ましゅまろてんし_three-view.png"
+    },
+    {
+      "id": "cms-4d8679933faacb722d7feb599a09d5e1",
+      "capturedAt": "2026-09-30T04:32:42.835Z",
+      "displayKey": "display/41.シフォン_そらっは_うさぎさんるーむうぇあ_three-view.webp",
+      "thumbnailKey": "thumbnails/41.シフォン_そらっは_うさぎさんるーむうぇあ_three-view.webp",
+      "width": 3840,
+      "height": 1280,
+      "uploaded": true,
+      "originalName": "41.シフォン_そらっは_うさぎさんるーむうぇあ_three-view.png"
+    },
+    {
+      "id": "cms-6898b14b4cecbee25f030798c79a57e0",
+      "capturedAt": "2026-09-30T04:33:20.606Z",
+      "displayKey": "display/41.シフォン_そらっは_セーラーミズ_face.webp",
+      "thumbnailKey": "thumbnails/41.シフォン_そらっは_セーラーミズ_face.webp",
+      "width": 2048,
+      "height": 2048,
+      "uploaded": true,
+      "originalName": "41.シフォン_そらっは_セーラーミズ_face.png"
+    },
+    {
+      "id": "cms-857cf74a9a8a327cc0745d4ed1f34115",
+      "capturedAt": "2026-09-30T04:33:21.628Z",
+      "displayKey": "display/41.シフォン_そらっは_セーラーミズ_three-view.webp",
+      "thumbnailKey": "thumbnails/41.シフォン_そらっは_セーラーミズ_three-view.webp",
+      "width": 3840,
+      "height": 1280,
+      "uploaded": true,
+      "originalName": "41.シフォン_そらっは_セーラーミズ_three-view.png"
+    },
+    {
+      "id": "cms-926cf8b8688e65d769baa9ab38c71c6b",
+      "capturedAt": "2026-09-30T04:32:36.907Z",
+      "displayKey": "display/41.シフォン_そらっは_デフォルト_face.webp",
+      "thumbnailKey": "thumbnails/41.シフォン_そらっは_デフォルト_face.webp",
+      "width": 2048,
+      "height": 2048,
+      "uploaded": true,
+      "originalName": "41.シフォン_そらっは_デフォルト_face.png"
+    },
+    {
+      "id": "cms-17d180bbf4ce7a80e0258436dd59d468",
+      "capturedAt": "2026-09-30T04:32:37.730Z",
+      "displayKey": "display/41.シフォン_そらっは_デフォルト_three-view.webp",
+      "thumbnailKey": "thumbnails/41.シフォン_そらっは_デフォルト_three-view.webp",
+      "width": 3840,
+      "height": 1280,
+      "uploaded": true,
+      "originalName": "41.シフォン_そらっは_デフォルト_three-view.png"
+    },
+    {
+      "id": "cms-5a31863062aadf5415cb3582532b3016",
+      "capturedAt": "2026-09-30T04:32:51.086Z",
+      "displayKey": "display/41.シフォン_そらっは_White Lily Archive_face.webp",
+      "thumbnailKey": "thumbnails/41.シフォン_そらっは_White Lily Archive_face.webp",
+      "width": 2048,
+      "height": 2048,
+      "uploaded": true,
+      "originalName": "41.シフォン_そらっは_White Lily Archive_face.png"
+    },
+    {
+      "id": "cms-d10696addf634e9a966c1e59fc8c96d1",
+      "capturedAt": "2026-09-30T04:32:51.890Z",
+      "displayKey": "display/41.シフォン_そらっは_White Lily Archive_three-view.webp",
+      "thumbnailKey": "thumbnails/41.シフォン_そらっは_White Lily Archive_three-view.webp",
+      "width": 3840,
+      "height": 1280,
+      "uploaded": true,
+      "originalName": "41.シフォン_そらっは_White Lily Archive_three-view.png"
+    },
+    {
+      "id": "cms-a9567603a2b6baab9d42f31b797ab270",
+      "capturedAt": "2026-09-30T04:32:42.062Z",
+      "displayKey": "display/41.シフォン_そらっは_うさぎさんるーむうぇあ_face.webp",
+      "thumbnailKey": "thumbnails/41.シフォン_そらっは_うさぎさんるーむうぇあ_face.webp",
+      "width": 2048,
+      "height": 2048,
+      "uploaded": true,
+      "originalName": "41.シフォン_そらっは_うさぎさんるーむうぇあ_face.png"
+    },
+    {
+      "id": "cms-3c560d1546316b25ff3d024a3321655e",
+      "capturedAt": "2026-09-30T04:49:26.178Z",
+      "displayKey": "display/31.シフォン_オレンジブラウン_「花」HANA_face.webp",
+      "thumbnailKey": "thumbnails/31.シフォン_オレンジブラウン_「花」HANA_face.webp",
+      "width": 2048,
+      "height": 2048,
+      "uploaded": true,
+      "originalName": "31.シフォン_オレンジブラウン_「花」HANA_face.png"
+    },
+    {
+      "id": "cms-794417e653651bdd7bee6f00113b6c06",
+      "capturedAt": "2026-09-30T04:49:27.024Z",
+      "displayKey": "display/31.シフォン_オレンジブラウン_「花」HANA_three-view.webp",
+      "thumbnailKey": "thumbnails/31.シフォン_オレンジブラウン_「花」HANA_three-view.webp",
+      "width": 3840,
+      "height": 1280,
+      "uploaded": true,
+      "originalName": "31.シフォン_オレンジブラウン_「花」HANA_three-view.png"
+    },
+    {
+      "id": "cms-e7e851a249ce109afcc63ba37f80fa55",
+      "capturedAt": "2026-09-30T04:49:15.638Z",
+      "displayKey": "display/31.シフォン_オレンジブラウン_うさぎさんるーむうぇあ_face.webp",
+      "thumbnailKey": "thumbnails/31.シフォン_オレンジブラウン_うさぎさんるーむうぇあ_face.webp",
+      "width": 2048,
+      "height": 2048,
+      "uploaded": true,
+      "originalName": "31.シフォン_オレンジブラウン_うさぎさんるーむうぇあ_face.png"
+    },
+    {
+      "id": "cms-8d41cd52c1c118c9415320471081085f",
+      "capturedAt": "2026-09-30T04:49:16.458Z",
+      "displayKey": "display/31.シフォン_オレンジブラウン_うさぎさんるーむうぇあ_three-view.webp",
+      "thumbnailKey": "thumbnails/31.シフォン_オレンジブラウン_うさぎさんるーむうぇあ_three-view.webp",
+      "width": 3840,
+      "height": 1280,
+      "uploaded": true,
+      "originalName": "31.シフォン_オレンジブラウン_うさぎさんるーむうぇあ_three-view.png"
+    },
+    {
+      "id": "cms-d0cdcf6efea18c77ed00aadeb3e72da2",
+      "capturedAt": "2026-09-30T04:49:09.725Z",
+      "displayKey": "display/31.シフォン_オレンジブラウン_デフォルト_face.webp",
+      "thumbnailKey": "thumbnails/31.シフォン_オレンジブラウン_デフォルト_face.webp",
+      "width": 2048,
+      "height": 2048,
+      "uploaded": true,
+      "originalName": "31.シフォン_オレンジブラウン_デフォルト_face.png"
+    },
+    {
+      "id": "cms-22ab89f76f2b3ee3b0f33dee6229e377",
+      "capturedAt": "2026-09-30T04:49:10.562Z",
+      "displayKey": "display/31.シフォン_オレンジブラウン_デフォルト_three-view.webp",
+      "thumbnailKey": "thumbnails/31.シフォン_オレンジブラウン_デフォルト_three-view.webp",
+      "width": 3840,
+      "height": 1280,
+      "uploaded": true,
+      "originalName": "31.シフォン_オレンジブラウン_デフォルト_three-view.png"
+    },
+    {
+      "id": "cms-07b1083bbf8b6bbf7fa5b758137e45bd",
+      "capturedAt": "2026-09-30T04:49:20.915Z",
+      "displayKey": "display/31.シフォン_オレンジブラウン_𝙁𝙪𝙣𝙠𝙮 𝙎𝙩𝙧𝙚𝙚𝙩 𝙑𝙞𝙫𝙚_face.webp",
+      "thumbnailKey": "thumbnails/31.シフォン_オレンジブラウン_𝙁𝙪𝙣𝙠𝙮 𝙎𝙩𝙧𝙚𝙚𝙩 𝙑𝙞𝙫𝙚_face.webp",
+      "width": 2048,
+      "height": 2048,
+      "uploaded": true,
+      "originalName": "31.シフォン_オレンジブラウン_𝙁𝙪𝙣𝙠𝙮 𝙎𝙩𝙧𝙚𝙚𝙩 𝙑𝙞𝙫𝙚_face.png"
+    },
+    {
+      "id": "cms-c121fdd5a35b479d5007e207d8350f18",
+      "capturedAt": "2026-09-30T04:49:22.047Z",
+      "displayKey": "display/31.シフォン_オレンジブラウン_𝙁𝙪𝙣𝙠𝙮 𝙎𝙩𝙧𝙚𝙚𝙩 𝙑𝙞𝙫𝙚_three-view.webp",
+      "thumbnailKey": "thumbnails/31.シフォン_オレンジブラウン_𝙁𝙪𝙣𝙠𝙮 𝙎𝙩𝙧𝙚𝙚𝙩 𝙑𝙞𝙫𝙚_three-view.webp",
+      "width": 3840,
+      "height": 1280,
+      "uploaded": true,
+      "originalName": "31.シフォン_オレンジブラウン_𝙁𝙪𝙣𝙠𝙮 𝙎𝙩𝙧𝙚𝙚𝙩 𝙑𝙞𝙫𝙚_three-view.png"
     }
   ],
   "photoSettings": {}
